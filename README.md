@@ -96,17 +96,18 @@ section 美术设计
 
 #### 动画
 
-* https://www.mixamo.com/#/单纯的动画网站Mixamo，能找到多数的一般动作；
-* https://assetstore.unity.com/资产商店，每周开发者能嫖一个付费资产；
+* https://www.mixamo.com/#/ 单纯的动画网站Mixamo，能找到多数的一般动作；
+* https://assetstore.unity.com/ 资产商店，每周开发者能嫖一个付费资产；
 
 #### 音效/配乐
 
-* https://www.aigei.com/上面音效配乐为主，也有一些特效UI等素材；
+* https://www.aigei.com/ 上面音效配乐为主，也有一些特效UI等素材；
 
 #### 模型
 
-* https://www.aplaybox.com/模之屋的模型以二次元为主，但是使用需要用Blender的cats插件将pmx转成fbx，具体看这篇[博客](https://ankiima.github.io/2023/04/20/unity8/#more)；
-* https://gamedev3d.com/forum-92-1.html游研堂除了模型还有动作，不过感觉比较少，而且好像多数要付费；
+* https://www.aplaybox.com/ 模之屋的模型以二次元为主，但是使用需要用Blender的cats插件将pmx转成fbx，具体看这篇[博客](https://ankiima.github.io/2023/04/20/unity8/#more)；
+* https://gamedev3d.com/forum-92-1.html 游研堂除了模型还有动作，不过感觉比较少，而且好像多数要付费；
+* https://texture.ninja/ 一个纹理网站。
 
 # 设计文档
 
