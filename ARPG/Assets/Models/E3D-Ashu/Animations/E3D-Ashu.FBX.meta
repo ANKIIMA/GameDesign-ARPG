@@ -642,8 +642,7 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: "Invalid copied Avatar Rig Configuration:\n\tNo human bone found.
-      Ensure both rig type match\n"
+    rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -700,43 +699,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - debd5a158089c21409bf9882463edc29
-  - 5174615147c33774692dbbcf092619e8
-  - b2f4dfcd27eaa98479b6ef7a79aeff0d
-  - f3204d9a619271c439c66b83945ff438
-  - 6f690e48ee1ef814c873054248dbc36f
-  - c6dee7f3e8dfd5b4c8aa1bfc230e2703
-  - c58de0f35d8271247830f34cc7dfe888
-  - 76f78318b0bfed74b9ae8f6c32c1119a
-  - c632bf3379973fa4fb70b1dbb1be4e5b
-  - 548f32cbc41ced144ab9eed8defdfef9
-  - c1934d96399383b4ba4225de929b5621
-  - cecf15cba8c33d14ebd1939f4eecac01
-  - d2834ee630b3df744a78d094e5d591a8
-  - f66854610e351854cb7972f64cd6b5f1
-  - 3a34d3b4232d85f4189dbc3c78aa07e1
-  - be7719121ef0866468e12dcd943f45a4
-  - 46a067ef5272ce944b45aaced12dd1a1
-  - d5c4abcba9843bb41bec7693a449e0b9
-  - 57245f55bdbe1ef499779d3d9be2043f
-  - 59bbae83351ceec4abb24303c5c5a029
-  - 5b9f3f9539de8194c8eba1d3acb38bbf
-  - d0a7c9c89976d2541bfc2c187bed7747
-  - b252ec9bb6e4f68408685d0d22128450
-  - 5b11711d60b23f84694212d518f90bcc
-  - 89c25b3015b2efc478be21f020c2d707
-  - ce644d55fcd594548bb5cc2ab9502ab8
-  - 69c9c05d4b038134d9d6d7212e29a59e
-  - 1b639affd55306148aebc08da1cbbaf9
-  - f61030034f918074b93be90c21c04fbf
-  - 67fee948391ff1d4c897e5622fbdfef8
-  - 7cb73995cbd8ae448bf183e6a3d521b1
-  - 7dc948fe93a06ae43adcb2bbfd71ac5e
-  - 75f1b6ba1e7693843898818f931fbcbe
-  - 5a0fc6d42cf9d7a45be762b342e79fd5
-  - d511a8f4ab56d2141880fe02cb24fe36
-  - beb25216b690b73418cee6db718d2a3c
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
