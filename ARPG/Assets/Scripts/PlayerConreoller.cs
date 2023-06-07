@@ -11,20 +11,15 @@ public class PlayerConreoller : MonoBehaviour
     private CharacterController characterController;                                    //Dipose the move and collider of the character
 
     //Intermediate variables
-    private float horizontalTargetSpeed;                                                //Target Speed in Horizontal Direction
-    private float horizontalCurrentSpeed;                                               //Current Speed in Horizontal Direction
-    private float verticalTargetSpeed;                                                  //Speed in Vertical Direction
-    private float verticalCurrentSpeed;                                                 //Current Speed in Vertical Direction
-    private Vector3 playerDirection;                                                    //Target Direction of the Camera
+    private float targetSpeed;                                                          //Target Speed of character
+    private float currentSpeed = 0;                                                     //Current Speed of character
+    private Vector3 playerTargetDirection;                                              //Target Direction of the Camera
+    private Vector3 playerCurrentDirection;                                             //Current Direction of the player
+    private float rotationFactor = 6f;                                                  //Smooth Factor of locomotion
+    private float runSpeed = 2f;                                                        //Speed when running
+    private float walkSpeed = 1f;                                                       //Speed when walking
+    private float speedFactor = 3f;                                                     //Speed Scale Factor
 
-
-
-    [SerializeField, SetProperty("Run Speed")]                                          //Speed when running
-    private float runSpeed = 2;
-    [SerializeField, SetProperty("Walk Speed")]                                         //Speed when walking
-    private float walkSpeed = 1;
-
-    
 
     //Player Input
     Vector2 moveInput;
@@ -62,33 +57,44 @@ public class PlayerConreoller : MonoBehaviour
     void Update()
     {
         calculateTargetDirection();
+        PlayerRotate();
         PlayerMoving();
+        
     }
 
+    //Calculate current and target player direction
     private void calculateTargetDirection()
     {
         Vector3 cameraForward = Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up).normalized;
-        Vector3 cameraRight = Camera.main.transform.right;
-        playerDirection = moveInput.y * cameraForward + moveInput.x * cameraRight;
-        Debug.Log(playerDirection);
+        Vector3 cameraRight = Camera.main.transform.right.normalized;
+        playerTargetDirection = moveInput.y * cameraForward + moveInput.x * cameraRight;
     }
 
-    //Only deal with the Animation, OnAnimatorMove() include the real movement
     //Lerp between currentSpeed and taragetSpeed
     private void PlayerMoving()
     {
-        verticalTargetSpeed = isRunning ? runSpeed : walkSpeed;
-        animator.SetFloat("Vertical Speed", verticalTargetSpeed * moveInput.magnitude, 0.1f, Time.deltaTime);
+        targetSpeed = isRunning ? runSpeed : walkSpeed;
+        targetSpeed = targetSpeed * moveInput.magnitude;
+
+        currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, 0.8f);
+        animator.SetFloat("Speed", currentSpeed, 0.1f, Time.deltaTime);
+
+        characterController.SimpleMove(playerCurrentDirection * currentSpeed * speedFactor);
+
     }
     
+    //Lerp between the current and target Quaternion, then rotate the player
     private void PlayerRotate()
     {
-        float rad = Mathf.Atan2(playerDirection.x, playerDirection.z);
+        //Zero Drection will cause no Rotation
+        if (playerTargetDirection == Vector3.zero) return;
 
+        Quaternion targetRotation = Quaternion.LookRotation(playerTargetDirection);
+        Quaternion currentRotation = Quaternion.Slerp(trans.rotation, targetRotation, rotationFactor * Time.deltaTime);
+
+        playerCurrentDirection = trans.forward;
+
+        trans.rotation = currentRotation;
     }
 
-    private void OnAnimatorMove()
-    {
-        //characterController.Move(animator.velocity);
-    }
 }
