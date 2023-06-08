@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerConreoller : MonoBehaviour
+public class BasicBeahaviour : MonoBehaviour
 {
     //Necessary Component
     private Transform trans;                                                            //Basic Transfrom Methods
