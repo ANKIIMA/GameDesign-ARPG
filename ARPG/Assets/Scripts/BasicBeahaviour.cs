@@ -12,18 +12,9 @@ public class BasicBeahaviour : MonoBehaviour
 
     //player properties
     private float playerHealth;                                                         //health
-    private float GetPlayerHealth
-    {
-        get { return playerHealth; }
-        set { playerHealth = value; }
-    }
-
     private float playerSkillPoint;                                                     //Skill Point
-    private float GetPlayerSkillPoint
-    {
-        get { return playerSkillPoint; }
-        set { playerSkillPoint = value; }
-    }
+    private float damageValue = 10f;                                                    //damage value of player
+    
 
     //Intermediate variables
     //Locomotion
@@ -44,6 +35,11 @@ public class BasicBeahaviour : MonoBehaviour
     private float comboLimitTime = 1.0f;                                                //Limit of the PlayerInput to satisfy a combo
     private int comboIndex = 0;                                                         //index of attack
 
+    //Jump
+    private float jumpSpeed = 0f;                                                       //speed of jumping
+    private float jumpTargetSpeed = 8f;                                                 //target speed of jumping
+    private float gravity = 20f;                                                        //stimulate the gravity
+
     //Animation Info
     AnimatorStateInfo currentState;                                                     //current state info of the animator
 
@@ -52,6 +48,11 @@ public class BasicBeahaviour : MonoBehaviour
     Vector2 moveInput;
     bool isRunning;
     bool attack;
+    bool jump;
+
+    public float PlayerHealth { get => playerHealth; set => playerHealth = value; }
+    public float PlayerSkillPoint { get => playerSkillPoint; set => playerSkillPoint = value; }
+    public float DamageValue { get => damageValue; set => damageValue = value; }
 
 
     // Start is called before the first frame update
@@ -84,6 +85,11 @@ public class BasicBeahaviour : MonoBehaviour
         attack = context.ReadValueAsButton();
     }
 
+    public void GetJumpInput(InputAction.CallbackContext context)
+    {
+        jump = context.ReadValueAsButton();
+    }
+
     #endregion
     
     // Update is called once per frame
@@ -94,18 +100,23 @@ public class BasicBeahaviour : MonoBehaviour
         PlayerAttack();
     }
 
+
     private void AnimatorInitalize()
     {
         int layerIndex = animator.GetLayerIndex("Base");
         currentState = animator.GetCurrentAnimatorStateInfo(layerIndex);
 
-        Debug.Log(currentState);
 
         //Set the attackDone to false when state is Move
         if (currentState.IsName("Move"))
         {
             attackDone = false;
             animator.SetBool("AttackDone", attackDone);
+        }
+
+        if(characterController.isGrounded)
+        {
+
         }
 
         //When there is over one second that the player did't input attack
@@ -130,6 +141,7 @@ public class BasicBeahaviour : MonoBehaviour
         if (currentState.IsTag("Attack")) return;
         calculateTargetDirection();
         PlayerRotate();
+        PlayerJump();
         PlayerMoving();
     }
 
@@ -150,8 +162,8 @@ public class BasicBeahaviour : MonoBehaviour
         currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, 0.8f);
         animator.SetFloat("Speed", currentSpeed, 0.1f, Time.deltaTime);
 
-        characterController.SimpleMove(playerCurrentDirection * currentSpeed * speedFactor);
-
+        playerCurrentDirection = Vector3.up * jumpSpeed + playerCurrentDirection * currentSpeed * speedFactor;
+        characterController.Move(playerCurrentDirection * Time.deltaTime);
     }
     
     //Lerp between the current and target Quaternion, then rotate the player
@@ -166,6 +178,27 @@ public class BasicBeahaviour : MonoBehaviour
         playerCurrentDirection = trans.forward;
 
         trans.rotation = currentRotation;
+    }
+
+    private void PlayerJump()
+    {
+        if(characterController.isGrounded)
+        {
+            if(jump)
+            {
+                jumpSpeed = jumpTargetSpeed;
+            }
+            else
+            {
+                jumpSpeed = 0f;
+            }
+        }
+        else
+        {
+            jumpSpeed -= gravity * Time.deltaTime;
+        }
+
+
     }
     #endregion
 
