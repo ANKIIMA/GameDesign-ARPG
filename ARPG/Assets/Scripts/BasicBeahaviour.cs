@@ -11,6 +11,7 @@ public class BasicBeahaviour : MonoBehaviour
     private Animator animator;                                                          //Interact with the Animation Controller
     private CharacterController characterController;                                    //Dipose the move and collider of the character
 
+
     //UI
     [SerializeField]
     private Slider HP;                                                                  //health UI of player
@@ -26,6 +27,7 @@ public class BasicBeahaviour : MonoBehaviour
     private float manaPointRecovery = 30f;                                              //revovery manapoint value of player
     private float damageValue = 10f;                                                    //damage value of player
     private float attackCost = 50f;                                                     //attack will take 20 manapoint
+    private float critcalRate = 1.0f;                                                     //critical rate of attack
 
 
     //Intermediate variables
@@ -44,7 +46,7 @@ public class BasicBeahaviour : MonoBehaviour
     private bool attackDone;                                                            //judge if a single attack is done playing
     private float lastAttackTimeInput;                                                  //Time of last Attack input
     private float comboCoolDownTime = 0.8f;                                             //the necessary animating time of a single Attack
-    private float comboLimitTime = 1.0f;                                                //Limit of the PlayerInput to satisfy a combo
+    private float comboLimitTime = 0.5f;                                                //Limit of the PlayerInput to satisfy a combo
     private int comboIndex = 0;                                                         //index of attack
 
     //Jump
@@ -108,8 +110,8 @@ public class BasicBeahaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        properitesManagement();
         AnimatorInitalize();
+        properitesManagement();
         uiInitialize();
         Locomotion();
         PlayerAttack();
@@ -118,7 +120,20 @@ public class BasicBeahaviour : MonoBehaviour
     private void properitesManagement()
     {
         playerManaPoint = Mathf.Clamp(playerManaPoint+Time.deltaTime * manaPointRecovery, 0f, playerMaxManaPoint);
+        /*if (currentState.IsTag("Attack") && currentState.normalizedTime == 0.2f)
+        {
+
+            if (Random.value > critcalRate)
+            {
+                Debug.Log("critical");
+                playerManaPoint = playerMaxManaPoint;
+            }
+
+           playerManaPoint = Mathf.Clamp(playerManaPoint - attackCost, 0f, playerMaxManaPoint);
+        }*/
     }
+
+    
 
     private void uiInitialize()
     {
@@ -132,18 +147,12 @@ public class BasicBeahaviour : MonoBehaviour
         int layerIndex = animator.GetLayerIndex("Base");
         currentState = animator.GetCurrentAnimatorStateInfo(layerIndex);
 
-
         //Set the attackDone to false when state is Move
         if (currentState.IsName("Move"))
         {
             attackDone = false;
-            animator.SetBool("AttackDone", attackDone);
         }
 
-        if(characterController.isGrounded)
-        {
-
-        }
 
         //When there is over one second that the player did't input attack
         //transfer the state to move
@@ -152,11 +161,12 @@ public class BasicBeahaviour : MonoBehaviour
             if (currentState.normalizedTime >= 1.0f && currentState.IsTag("Attack"))
             {
                 comboIndex = 0;
-                animator.SetInteger("ComboIndex", comboIndex);
                 attackDone = true;
-                animator.SetBool("AttackDone", attackDone);
             }
         }
+
+        animator.SetBool("AttackDone", attackDone);
+        animator.SetInteger("ComboIndex", comboIndex);
     }
 
 
@@ -236,32 +246,29 @@ public class BasicBeahaviour : MonoBehaviour
         if (attack && playerManaPoint >= attackCost)
         {
             //only when state is move, at the same time comboIndex is 0, the attack is permitted
-            if(comboIndex == 0)
+            if (comboIndex == 0)
             {
                 comboIndex = 1;
-                animator.SetInteger("ComboIndex", comboIndex);
-
                 playerManaPoint = Mathf.Clamp(playerManaPoint - attackCost, 0f, playerMaxManaPoint);
             }
             //transfer to combo2
             else if(comboIndex == 1 && currentState.IsName(comboNameList[comboIndex]) && currentState.normalizedTime >= comboCoolDownTime){
                 comboIndex = 2;
-                animator.SetInteger("ComboIndex", comboIndex);
-
                 playerManaPoint = Mathf.Clamp(playerManaPoint - attackCost, 0f, playerMaxManaPoint);
             }
             //transfer to combo3
             else if(comboIndex == 2 && currentState.IsName(comboNameList[comboIndex]) && currentState.normalizedTime >= comboCoolDownTime){
                 comboIndex = 3;
-                animator.SetInteger("ComboIndex", comboIndex);
-                comboIndex = 0;
-
-                
                 playerManaPoint = Mathf.Clamp(playerManaPoint - attackCost, 0f, playerMaxManaPoint);
             }
-            //set the last time that the player input attack
-            lastAttackTimeInput = Time.time;
 
+            else if(comboIndex == 3 && currentState.IsName(comboNameList[comboIndex]) && currentState.normalizedTime >= comboCoolDownTime)
+            {
+                comboIndex = 1;
+                playerManaPoint = Mathf.Clamp(playerManaPoint - attackCost, 0f, playerMaxManaPoint);
+            }
+            //set the last time that the player input attack, and cost to attack
+            lastAttackTimeInput = Time.time;
         }
 
     }
