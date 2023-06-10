@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class BasicBeahaviour : MonoBehaviour
 {
@@ -10,20 +11,24 @@ public class BasicBeahaviour : MonoBehaviour
     private Animator animator;                                                          //Interact with the Animation Controller
     private CharacterController characterController;                                    //Dipose the move and collider of the character
 
-    //player properties
-    private float playerHealth;                                                         //health
-    private float GetPlayerHealth
-    {
-        get { return playerHealth; }
-        set { playerHealth = value; }
-    }
 
-    private float playerSkillPoint;                                                     //Skill Point
-    private float GetPlayerSkillPoint
-    {
-        get { return playerSkillPoint; }
-        set { playerSkillPoint = value; }
-    }
+    //UI
+    [SerializeField]
+    private Slider HP;                                                                  //health UI of player
+    [SerializeField]
+    private Slider MP;                                                                  //mana UI of player
+
+    //player properties
+    private float playerHealthPoint = 100f;                                             //health
+    private float playerMaxHealthPoint = 100f;
+    private float playerManaPoint  =100f;                                               //Skill Point
+    private float playerMaxManaPoint = 100f;
+    [SerializeField]
+    private float manaPointRecovery = 30f;                                              //revovery manapoint value of player
+    private float damageValue = 10f;                                                    //damage value of player
+    private float attackCost = 50f;                                                     //attack will take 20 manapoint
+    private float critcalRate = 1.0f;                                                     //critical rate of attack
+
 
     //Intermediate variables
     //Locomotion
@@ -41,8 +46,13 @@ public class BasicBeahaviour : MonoBehaviour
     private bool attackDone;                                                            //judge if a single attack is done playing
     private float lastAttackTimeInput;                                                  //Time of last Attack input
     private float comboCoolDownTime = 0.8f;                                             //the necessary animating time of a single Attack
-    private float comboLimitTime = 1.0f;                                                //Limit of the PlayerInput to satisfy a combo
+    private float comboLimitTime = 0.5f;                                                //Limit of the PlayerInput to satisfy a combo
     private int comboIndex = 0;                                                         //index of attack
+
+    //Jump
+    private float jumpSpeed = 0f;                                                       //speed of jumping
+    private float jumpTargetSpeed = 8f;                                                 //target speed of jumping
+    private float gravity = 20f;                                                        //stimulate the gravity
 
     //Animation Info
     AnimatorStateInfo currentState;                                                     //current state info of the animator
@@ -52,6 +62,11 @@ public class BasicBeahaviour : MonoBehaviour
     Vector2 moveInput;
     bool isRunning;
     bool attack;
+    bool jump;
+
+    public float PlayerHealth { get => playerHealthPoint; set => playerHealthPoint = value; }
+    public float PlayerSkillPoint { get => playerManaPoint; set => playerManaPoint = value; }
+    public float DamageValue { get => damageValue; set => damageValue = value; }
 
 
     // Start is called before the first frame update
@@ -61,6 +76,7 @@ public class BasicBeahaviour : MonoBehaviour
         trans = GetComponent<Transform>();
         animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
+        
 
         //Set the cursor to be invisible in the game
         Cursor.lockState = CursorLockMode.Locked;
@@ -84,29 +100,59 @@ public class BasicBeahaviour : MonoBehaviour
         attack = context.ReadValueAsButton();
     }
 
+    public void GetJumpInput(InputAction.CallbackContext context)
+    {
+        jump = context.ReadValueAsButton();
+    }
+
     #endregion
     
     // Update is called once per frame
     void Update()
     {
         AnimatorInitalize();
+        properitesManagement();
+        uiInitialize();
         Locomotion();
         PlayerAttack();
     }
+
+    private void properitesManagement()
+    {
+        playerManaPoint = Mathf.Clamp(playerManaPoint+Time.deltaTime * manaPointRecovery, 0f, playerMaxManaPoint);
+        /*if (currentState.IsTag("Attack") && currentState.normalizedTime == 0.2f)
+        {
+
+            if (Random.value > critcalRate)
+            {
+                Debug.Log("critical");
+                playerManaPoint = playerMaxManaPoint;
+            }
+
+           playerManaPoint = Mathf.Clamp(playerManaPoint - attackCost, 0f, playerMaxManaPoint);
+        }*/
+    }
+
+    
+
+    private void uiInitialize()
+    {
+        HP.value = this.playerHealthPoint / playerMaxHealthPoint;
+        MP.value = this.playerManaPoint / playerMaxManaPoint;
+    }
+
 
     private void AnimatorInitalize()
     {
         int layerIndex = animator.GetLayerIndex("Base");
         currentState = animator.GetCurrentAnimatorStateInfo(layerIndex);
 
-        Debug.Log(currentState);
-
         //Set the attackDone to false when state is Move
         if (currentState.IsName("Move"))
         {
             attackDone = false;
-            animator.SetBool("AttackDone", attackDone);
         }
+
 
         //When there is over one second that the player did't input attack
         //transfer the state to move
@@ -115,11 +161,12 @@ public class BasicBeahaviour : MonoBehaviour
             if (currentState.normalizedTime >= 1.0f && currentState.IsTag("Attack"))
             {
                 comboIndex = 0;
-                animator.SetInteger("ComboIndex", comboIndex);
                 attackDone = true;
-                animator.SetBool("AttackDone", attackDone);
             }
         }
+
+        animator.SetBool("AttackDone", attackDone);
+        animator.SetInteger("ComboIndex", comboIndex);
     }
 
 
@@ -130,6 +177,7 @@ public class BasicBeahaviour : MonoBehaviour
         if (currentState.IsTag("Attack")) return;
         calculateTargetDirection();
         PlayerRotate();
+        PlayerJump();
         PlayerMoving();
     }
 
@@ -150,8 +198,8 @@ public class BasicBeahaviour : MonoBehaviour
         currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, 0.8f);
         animator.SetFloat("Speed", currentSpeed, 0.1f, Time.deltaTime);
 
-        characterController.SimpleMove(playerCurrentDirection * currentSpeed * speedFactor);
-
+        playerCurrentDirection = Vector3.up * jumpSpeed + playerCurrentDirection * currentSpeed * speedFactor;
+        characterController.Move(playerCurrentDirection * Time.deltaTime);
     }
     
     //Lerp between the current and target Quaternion, then rotate the player
@@ -167,6 +215,27 @@ public class BasicBeahaviour : MonoBehaviour
 
         trans.rotation = currentRotation;
     }
+
+    private void PlayerJump()
+    {
+        if(characterController.isGrounded)
+        {
+            if(jump)
+            {
+                jumpSpeed = jumpTargetSpeed;
+            }
+            else
+            {
+                jumpSpeed = 0f;
+            }
+        }
+        else
+        {
+            jumpSpeed -= gravity * Time.deltaTime;
+        }
+
+
+    }
     #endregion
 
     #region Attack
@@ -174,30 +243,36 @@ public class BasicBeahaviour : MonoBehaviour
     {
         
         //set right comboIndex for playerInput attack
-        if (attack)
+        if (attack && playerManaPoint >= attackCost)
         {
             //only when state is move, at the same time comboIndex is 0, the attack is permitted
-            if(comboIndex == 0)
+            if (comboIndex == 0)
             {
                 comboIndex = 1;
-                animator.SetInteger("ComboIndex", comboIndex);
+                playerManaPoint = Mathf.Clamp(playerManaPoint - attackCost, 0f, playerMaxManaPoint);
             }
             //transfer to combo2
             else if(comboIndex == 1 && currentState.IsName(comboNameList[comboIndex]) && currentState.normalizedTime >= comboCoolDownTime){
                 comboIndex = 2;
-                animator.SetInteger("ComboIndex", comboIndex);
+                playerManaPoint = Mathf.Clamp(playerManaPoint - attackCost, 0f, playerMaxManaPoint);
             }
             //transfer to combo3
             else if(comboIndex == 2 && currentState.IsName(comboNameList[comboIndex]) && currentState.normalizedTime >= comboCoolDownTime){
                 comboIndex = 3;
-                animator.SetInteger("ComboIndex", comboIndex);
-                comboIndex = 0;
+                playerManaPoint = Mathf.Clamp(playerManaPoint - attackCost, 0f, playerMaxManaPoint);
             }
-            //set the last time that the player input attack
+
+            else if(comboIndex == 3 && currentState.IsName(comboNameList[comboIndex]) && currentState.normalizedTime >= comboCoolDownTime)
+            {
+                comboIndex = 1;
+                playerManaPoint = Mathf.Clamp(playerManaPoint - attackCost, 0f, playerMaxManaPoint);
+            }
+            //set the last time that the player input attack, and cost to attack
             lastAttackTimeInput = Time.time;
         }
 
     }
+
     #endregion
 
 }
