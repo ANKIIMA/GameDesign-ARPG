@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class BasicBeahaviour : MonoBehaviour
 {
+    //model instance
+    private playerModel model;
+
+
     //Necessary Component
     private Transform trans;                                                            //Basic Transfrom Methods
     private Animator animator;                                                          //Interact with the Animation Controller
@@ -23,7 +27,6 @@ public class BasicBeahaviour : MonoBehaviour
     private float playerMaxHealthPoint = 100f;
     private float playerManaPoint  =100f;                                               //Skill Point
     private float playerMaxManaPoint = 100f;
-    [SerializeField]
     private float manaPointRecovery = 30f;                                              //revovery manapoint value of player
     private float damageValue = 10f;                                                    //damage value of player
     private float attackCost = 50f;                                                     //attack will take 20 manapoint
@@ -64,14 +67,16 @@ public class BasicBeahaviour : MonoBehaviour
     bool attack;
     bool jump;
 
-    public float PlayerHealth { get => playerHealthPoint; set => playerHealthPoint = value; }
-    public float PlayerSkillPoint { get => playerManaPoint; set => playerManaPoint = value; }
+
     public float DamageValue { get => damageValue; set => damageValue = value; }
 
 
     // Start is called before the first frame update
     void Start()
     {
+        //Get model instance
+        model = playerModel.GetInstance();
+
         //Get necessary components
         trans = GetComponent<Transform>();
         animator = GetComponent<Animator>();
