@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponBeahaviour : MonoBehaviour
+public class WeaponController : MonoBehaviour
 {
     [SerializeField]
     GameObject player;
@@ -23,7 +23,7 @@ public class WeaponBeahaviour : MonoBehaviour
         
         if(other.gameObject.tag == "Enemy")
         {   
-            other.gameObject.GetComponent<EnemyController>().recieveDamage(player.GetComponent<BasicBeahaviour>().DamageValue);
+            other.gameObject.GetComponent<EnemyController>().recieveDamage(player.GetComponent<PlayerController>().GetDamageValue());
         }
     }
 }

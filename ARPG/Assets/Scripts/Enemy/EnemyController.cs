@@ -5,20 +5,17 @@ using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
-    //UI
-    [SerializeField]
-    private Slider HP;
-
-    //
-    private bool deadFlag  = false;
-    private bool isAttacked = false;
+    //model of Enemy
+    EnemyModel model;
 
     //necessary components
     private Animator animator;
 
+    private void Awake()
+    {
+        model = EnemyModel.GetInstance();
+    }
 
-    //Properties
-    private float healthPoint = 100f;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,43 +25,43 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        uiInitialize();
-    }
-
-    private void uiInitialize()
-    {
         animationInitialize();
-        HP.value = healthPoint / 100f;
     }
 
+    #region AnimationInitialize
     private void animationInitialize()
     {
-        if(deadFlag == true)
+        if(model.DeadFlag == true)
         {
-            animator.SetTrigger("deadFlag");
-            deadFlag = false;
+            animator.SetTrigger("DeadFlag");
+            model.DeadFlag = false;
         }
 
-        if(isAttacked)
+        if(model.IsAttacked)
         {
-            animator.SetTrigger("isAttacked");
-            isAttacked = false;
+            animator.SetTrigger("IsAttacked");
+            model.IsAttacked = false;
         }
 
     }
 
+    #endregion
+
+    #region damage check
     public void recieveDamage(float damageValue)
     {
         
-        if(healthPoint <= 0)
+        if(model.HealthPoint <= 0)
         {
-            deadFlag = true;
+            model.DeadFlag = true;
         }
         else
         {
-            healthPoint -= Mathf.Clamp(damageValue, 0f, 100f);
-            isAttacked = true;
+            model.HealthPoint -= Mathf.Clamp(damageValue, 0f, 100f);
+            model.IsAttacked = true;
         }    
         
     }
+
+    #endregion
 }
