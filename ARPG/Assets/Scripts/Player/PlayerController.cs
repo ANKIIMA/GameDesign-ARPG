@@ -81,9 +81,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AnimatorInitalize();
+        
         properitesManagement();
         Locomotion();
+        AnimatorInitalize();
         PlayerAttack();
     }
 
@@ -133,6 +134,7 @@ public class PlayerController : MonoBehaviour
 
         animator.SetBool("AttackDone", model.AttackDone);
         animator.SetInteger("ComboIndex", model.ComboIndex);
+        animator.SetFloat("Speed", model.CurrentSpeed, 0.1f, Time.deltaTime);
     }
 
     #endregion
@@ -163,7 +165,7 @@ public class PlayerController : MonoBehaviour
         model.TargetSpeed = model.TargetSpeed * moveInput.magnitude;
 
         model.CurrentSpeed = Mathf.Lerp(model.CurrentSpeed, model.TargetSpeed, 0.8f);
-        animator.SetFloat("Speed", model.CurrentSpeed, 0.1f, Time.deltaTime);
+        //animator.SetFloat("Speed", model.CurrentSpeed, 0.1f, Time.deltaTime);
 
         model.PlayerCurrentDirection = Vector3.up * model.JumpSpeed + model.PlayerCurrentDirection * model.CurrentSpeed * model.SpeedFactor;
         characterController.Move(model.PlayerCurrentDirection * Time.deltaTime);
