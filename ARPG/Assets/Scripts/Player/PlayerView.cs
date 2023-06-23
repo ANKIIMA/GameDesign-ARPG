@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DuloGames.UI;
 
 public class PlayerView : MonoBehaviour
 {
@@ -9,10 +10,8 @@ public class PlayerView : MonoBehaviour
     private playerModel model;
 
     //UI
-    [SerializeField]
-    private Slider HP;                                                                                  //health UI of player
-    [SerializeField]
-    private Slider MP;                                                                                  //mana UI of player
+    [SerializeField] private UIProgressBar m_HpProgressBar;                                             //health UI of player
+    [SerializeField] private UIProgressBar m_MpProgressBar;                                             //mana UI of player
 
     private void Start()
     {
@@ -23,13 +22,20 @@ public class PlayerView : MonoBehaviour
     }
 
     //enents functions
+
     private void setPlayerHealthPoint(float value)
     {
-        HP.value = model.PlayerHealthPoint / model.PlayerMaxHealthPoint;
+        if (this.m_HpProgressBar == null)
+            return;
+
+        this.m_HpProgressBar.fillAmount = model.PlayerHealthPoint / model.PlayerMaxHealthPoint;
     }
 
     private void setPlayerManaPoint(float value)
     {
-        MP.value = model.PlayerManaPoint / model.PlayerMaxManaPoint;
+        if (this.m_MpProgressBar == null)
+            return;
+
+        this.m_MpProgressBar.fillAmount = model.PlayerManaPoint / model.PlayerMaxManaPoint;
     }
 }
