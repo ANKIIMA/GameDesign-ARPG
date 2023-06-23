@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: OakTree03
+  m_Shader: {fileID: 4800000, guid: 922009cd7df1b8349a0d4524598e1be5, type: 3}
+  m_ShaderKeywords: _INVERTGRADIENT_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ColorID:
+        m_Texture: {fileID: 2800000, guid: c76e5865807f78a49999430391dae3cc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ColorVariationNoise:
+        m_Texture: {fileID: 2800000, guid: 56fc026eb79effe4b85400592e33d639, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 8821829e9fe2d2d4291ed537ba980085, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: 4c1ea70d9fb1abd41a7218d60e26b18b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: 8821829e9fe2d2d4291ed537ba980085, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample1:
+        m_Texture: {fileID: 2800000, guid: 3e33323b1eef59d41b0febf544b8ad12, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _ColorVariationPower: 0
+    - _ColorVariationPower1: 0.819
+    - _Cutoff: 0.25
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _GradientFalloff: 2
+    - _GradientFalloff1: 2
+    - _GradientPosition: 0.675
+    - _GradientPosition1: 0.546
+    - _InvertGradient: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _NoiseScale: 0.15
+    - _NoiseScale1: 0.5
+    - _NormalAttenuation: 1
+    - _NormalDistortion: 0
+    - _NormalDistortion1: 1
+    - _NormalPower: 1
+    - _OcclusionPower: 1
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _ScatteringPower: 1
+    - _ScatteringScale: 0.15
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _WindDebugView: 0
+    - _WindDebugView1: 0
+    - _WindMultiplier: 0.5
+    - _WindMultiplier1: 0.5
+    - _ZWrite: 1
+    - __dirty: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color0: {r: 0.3235204, g: 0.57547164, b: 0.12486646, a: 0}
+    - _Color1: {r: 0.854902, g: 0.8588236, b: 0.854902, a: 0}
+    - _ColorVariation: {r: 1, g: 0.22267064, b: 0, a: 1}
+    - _ColorVariation1: {r: 1, g: 1, b: 1, a: 0}
+    - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GradientColor: {r: 0.13610321, g: 0.7924528, b: 0, a: 1}
+    - _GradientColor1: {r: 1, g: 1, b: 1, a: 0}
+    - _MainColor: {r: 0.14878201, g: 0.36200002, b: 0.21511647, a: 1}
+    - _MainColor1: {r: 1, g: 0, b: 0, a: 0}
+    - _TrunkColor: {r: 0.5, g: 0.43962264, b: 0.4245283, a: 1}
