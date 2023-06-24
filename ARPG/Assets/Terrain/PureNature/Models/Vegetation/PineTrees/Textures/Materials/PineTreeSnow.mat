@@ -100,6 +100,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _BaseWind: 2
     - _BaseWindChannel: 0
     - _BranchPhase: 0.35
@@ -133,9 +134,9 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _GradientFalloff: 2
+    - _GradientFalloff: 1.733
     - _GradientFalloff1: 1.18
-    - _GradientPosition: 0.9
+    - _GradientPosition: 1
     - _GradientPosition1: -0.53
     - _HideHardAngles: 0
     - _HidePower: 2.5
@@ -165,6 +166,7 @@ Material:
     - _PrimaryFactor: 1.01
     - _PrimaryFactor1: 0
     - _RefractionPower: 0
+    - _Scattering: 1
     - _ScatteringPower: 1
     - _ScatteringScale: 0.096
     - _SecondaryFactor: 1.81
@@ -188,9 +190,11 @@ Material:
     - _Tiling: 1
     - _TransAmbient: 1
     - _TransDirect: 1
-    - _TransNormalDistortion: 1
+    - _TransNormal: 1
+    - _TransNormalDistortion: 0
     - _TransScattering: 1
     - _TransShadow: 1
+    - _TransStrength: 1
     - _Translucency: 1
     - _TrunkWindAmplitude: 0.05
     - _TrunkWindPower: 1
@@ -214,13 +218,13 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 0.6163509, g: 1, b: 0, a: 0}
-    - _ColorVariation: {r: 0.4737896, g: 0.53384626, b: 0.5943396, a: 0}
+    - _ColorVariation: {r: 0.47450984, g: 0.53333336, b: 0.59607846, a: 0}
     - _ColorVariation1: {r: 1, g: 0, b: 0, a: 0}
     - _DirtColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GradientColor: {r: 1, g: 1, b: 1, a: 0}
     - _GradientColor1: {r: 1, g: 1, b: 1, a: 0}
-    - _MainColor: {r: 0.72156864, g: 0.8745099, b: 1, a: 1}
+    - _MainColor: {r: 0.7216981, g: 0.8729492, b: 1, a: 1}
     - _MainColor1: {r: 0.57778096, g: 1, b: 0, a: 0}
     - _ScatteringColor: {r: 0.4030302, g: 0.7264151, b: 0, a: 0}
     - _Specular: {r: 0, g: 0, b: 0, a: 0}

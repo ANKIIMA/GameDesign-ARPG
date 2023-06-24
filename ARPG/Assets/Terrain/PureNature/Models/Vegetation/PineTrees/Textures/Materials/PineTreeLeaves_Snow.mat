@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: PineTreeLeaves_Snow
   m_Shader: {fileID: 4800000, guid: 0f96a2937f6bace459a5fdaac39c0fb3, type: 3}
-  m_ShaderKeywords: _ALPHATEST_ON _BASEWINDCHANNEL_R _MICROWINDCHANNEL_R
+  m_ShaderKeywords: _ALPHATEST_ON _BASEWINDCHANNEL_R _DEPOSITLAYERCHANNEL_B _MICROWINDCHANNEL_R
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -108,6 +108,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _BaseWind: 2
     - _BaseWindChannel: 0
     - _BranchPhase: 0.35
@@ -164,7 +165,7 @@ Material:
     - _NoiseScale1: 0.06
     - _NormalAttenuation: 1
     - _NormalDistortion: 1
-    - _NormalPower: 1
+    - _NormalPower: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _ParallaxBias: 0
@@ -173,6 +174,7 @@ Material:
     - _PrimaryFactor: 1.01
     - _PrimaryFactor1: 0
     - _RefractionPower: 0
+    - _Scattering: 1
     - _ScatteringPower: 1
     - _ScatteringScale: 0.15
     - _SecondaryFactor: 1.81
@@ -196,9 +198,11 @@ Material:
     - _Tiling: 1
     - _TransAmbient: 1
     - _TransDirect: 1
-    - _TransNormalDistortion: 0
+    - _TransNormal: 0
+    - _TransNormalDistortion: 1
     - _TransScattering: 1
     - _TransShadow: 0.5
+    - _TransStrength: 1
     - _Translucency: 1
     - _TrunkWindAmplitude: 0.05
     - _TrunkWindPower: 1
@@ -215,7 +219,7 @@ Material:
     - _WindSpeed: 1
     - _WindTrunkContrast: 0
     - _WindTrunkContrast1: 15
-    - _WindTrunkPosition: 2
+    - _WindTrunkPosition: 1
     - _WindTrunkPosition1: 8
     - _ZWrite: 1
     - __dirty: 0
@@ -228,7 +232,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GradientColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0}
     - _GradientColor1: {r: 1, g: 1, b: 1, a: 0}
-    - _MainColor: {r: 0.25925693, g: 0.3679245, b: 0.23082057, a: 0}
+    - _MainColor: {r: 0.2592569, g: 0.36792448, b: 0.23082054, a: 0}
     - _MainColor1: {r: 0.57778096, g: 1, b: 0, a: 0}
     - _ScatteringColor: {r: 0.4030302, g: 0.7264151, b: 0, a: 0}
     - _Specular: {r: 0, g: 0, b: 0, a: 0}

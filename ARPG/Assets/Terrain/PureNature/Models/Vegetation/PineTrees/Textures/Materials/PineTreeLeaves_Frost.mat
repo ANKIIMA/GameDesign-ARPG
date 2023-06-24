@@ -108,6 +108,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _BaseWind: 2
     - _BaseWindChannel: 2
     - _BranchPhase: 0.35
@@ -173,6 +174,7 @@ Material:
     - _PrimaryFactor: 1.01
     - _PrimaryFactor1: 0
     - _RefractionPower: 0
+    - _Scattering: 1
     - _ScatteringPower: 1
     - _ScatteringScale: 0
     - _SecondaryFactor: 1.81
@@ -196,9 +198,11 @@ Material:
     - _Tiling: 1
     - _TransAmbient: 1
     - _TransDirect: 1
-    - _TransNormalDistortion: 0
+    - _TransNormal: 0
+    - _TransNormalDistortion: 1
     - _TransScattering: 1
     - _TransShadow: 0.5
+    - _TransStrength: 1
     - _Translucency: 1
     - _TrunkWindAmplitude: 0.05
     - _TrunkWindPower: 1
@@ -215,7 +219,7 @@ Material:
     - _WindSpeed: 1
     - _WindTrunkContrast: 0
     - _WindTrunkContrast1: 15
-    - _WindTrunkPosition: 2
+    - _WindTrunkPosition: 1
     - _WindTrunkPosition1: 8
     - _ZWrite: 1
     - __dirty: 0

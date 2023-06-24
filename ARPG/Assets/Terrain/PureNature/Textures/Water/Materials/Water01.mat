@@ -114,15 +114,15 @@ Material:
     m_Floats:
     - _AlphaCutoff: 0.5
     - _BumpScale: 1
-    - _CausticsScale: 0.15
+    - _CausticsScale: 0.54
     - _CausticsSpeed: 1.5
     - _ChromaticAberration: 0.1
     - _CousticOffset: 0
     - _Cutoff: 0.5
     - _Depth: 1.1
     - _DetailNormalMapScale: 1
-    - _DistanceFade: 5000
-    - _DistanceFadeOffset: 5000
+    - _DistanceFade: 1
+    - _DistanceFadeOffset: 1
     - _DistanceMax: 20
     - _DistanceMin: 0
     - _DistortionPower1: 0.82
@@ -131,14 +131,13 @@ Material:
     - _EdgeDistance: 0.941
     - _EdgeLength: 50
     - _EdgePower: 1
-    - _EdgesFade: 0.05
+    - _EdgesFade: 4.9
     - _Float2: 1000
     - _Float3: 0.744
     - _FoamContrast: 1.63
     - _FoamDepth: 0
     - _FoamDistance: 14
     - _FoamFalloff: 0
-    - _FoamNormalPower: 1
     - _FoamPower: 0.014
     - _FoamScale: 3.04
     - _FoamSmoothness: 0
@@ -164,11 +163,14 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _RefractionPower: 2
-    - _SmoothnessPower: 1
+    - _SmoothnessPower: 0.99
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Tess: 16
+    - _TessMax: 25
+    - _TessMin: 10
+    - _TessValue: 16
     - _TesselationPower: 64
     - _Tiling: 4
     - _UVSec: 0
@@ -190,11 +192,11 @@ Material:
     - _hhdjt: 500
     - _kykyk: 1000
     m_Colors:
-    - _CausticsColor: {r: 0.29125133, g: 0.5575275, b: 0.7264151, a: 0}
+    - _CausticsColor: {r: 0.2912512, g: 0.5575273, b: 0.7264151, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 0, g: 0.5987654, b: 1, a: 0}
     - _Color1: {r: 1, g: 0.76618373, b: 0, a: 1}
-    - _DepthColor: {r: 0.05206476, g: 0.34988484, b: 0.735849, a: 0}
+    - _DepthColor: {r: 0.052064672, g: 0.3498847, b: 0.735849, a: 0}
     - _DepthColor1: {r: 0, g: 1, b: 0.8509803, a: 0}
     - _Direction: {r: 1, g: 0, b: -1, a: 0.2}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

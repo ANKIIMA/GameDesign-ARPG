@@ -31,6 +31,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 56fc026eb79effe4b85400592e33d639, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ColorVariationNoise1:
+        m_Texture: {fileID: 2800000, guid: 56fc026eb79effe4b85400592e33d639, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -59,6 +63,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 97a5949032387fe468d7eae9c35f362d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Normal1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Occlusion:
         m_Texture: {fileID: 2800000, guid: f684fd2768507ae4c8f786d564c8fe41, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -76,8 +84,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _BumpScale: 1
-    - _ColorVariationPower: 0.517
+    - _ColorVariationPower: 0.75
     - _Cutoff: 0.25
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -95,6 +104,7 @@ Material:
     - _NormalDistortion: 0
     - _NormalDistortion1: 1
     - _NormalPower: 1
+    - _NormalPower1: 1
     - _OcclusionPower: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -117,5 +127,5 @@ Material:
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GradientColor: {r: 0.31500998, g: 0.5754717, b: 0.15472588, a: 1}
-    - _MainColor: {r: 0.48031577, g: 0.70199996, b: 0, a: 1}
+    - _MainColor: {r: 0.3689574, g: 0.5377358, b: 0, a: 1}
     - _TrunkColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}

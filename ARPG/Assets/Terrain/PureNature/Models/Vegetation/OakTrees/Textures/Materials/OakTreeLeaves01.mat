@@ -101,6 +101,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _BaseWind: 2
     - _BaseWindChannel: 2
     - _Bias: 1
@@ -151,6 +152,7 @@ Material:
     - _PrimaryFactor: 1.01
     - _PrimaryFactor1: 1.02
     - _Scale: -1
+    - _Scattering: 1
     - _ScatteringPower: 0
     - _ScatteringScale: 0.15
     - _SecondaryFactor: 1.7
@@ -165,9 +167,11 @@ Material:
     - _Trans: 1
     - _TransAmbient: 1
     - _TransDirect: 1
-    - _TransNormalDistortion: 0
+    - _TransNormal: 0
+    - _TransNormalDistortion: 1
     - _TransScattering: 1
     - _TransShadow: 0.5
+    - _TransStrength: 1
     - _Translucency: 1
     - _TrunkWindAmplitude: 0.09
     - _TrunkWindPower: 1
@@ -193,7 +197,7 @@ Material:
     - _ColorVariation: {r: 1, g: 0.11461386, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GradientColor: {r: 0.13610326, g: 0.7924528, b: 0, a: 1}
-    - _MainColor: {r: 0.1549929, g: 0.4056604, b: 0.23150739, a: 1}
+    - _MainColor: {r: 0.15686275, g: 0.4039216, b: 0.23137257, a: 1}
     - _ScatteringColor: {r: 0.56218994, g: 1, b: 0, a: 0}
     - _SpecularColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
     - _Tiling: {r: 4, g: 4, b: 0, a: 0}

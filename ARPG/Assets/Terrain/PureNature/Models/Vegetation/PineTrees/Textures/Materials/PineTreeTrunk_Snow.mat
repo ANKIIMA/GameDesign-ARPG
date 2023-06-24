@@ -106,6 +106,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _2ndNormalPower: 1
+    - _AlphaCutoff: 0.5
     - _BaseWind: 2
     - _BaseWindChannel: 2
     - _BlendNormals: 1
@@ -169,14 +170,14 @@ Material:
     - _WindBurstsScale: 1
     - _WindBurstsSpeed: 50
     - _WindDebugView: 0
-    - _WindMultiplier: 0.25
+    - _WindMultiplier: 0.5
     - _WindMultiplier1: 0
     - _WindPosContrast: 7
     - _WindPosition: 10
     - _WindPower: 0.01
     - _WindSpeed: 1
-    - _WindTrunkContrast: 0
-    - _WindTrunkPosition: 2
+    - _WindTrunkContrast: 0.5
+    - _WindTrunkPosition: 1
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
