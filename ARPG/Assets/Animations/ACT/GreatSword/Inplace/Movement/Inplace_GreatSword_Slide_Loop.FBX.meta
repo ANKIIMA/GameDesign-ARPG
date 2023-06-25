@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: 60ab4325d9eddc944819fd4cf9e22c3c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ball_l
+    100002: ball_r
+    100004: Bip001 HeadNub
+    100006: Bip001 L Finger0Nub
+    100008: Bip001 L Finger1Nub
+    100010: Bip001 L Finger2Nub
+    100012: Bip001 L Finger3Nub
+    100014: Bip001 L Finger4Nub
+    100016: Bip001 L Toe0Nub
+    100018: Bip001 Pelvis
+    100020: Bip001 R Finger0Nub
+    100022: Bip001 R Finger1Nub
+    100024: Bip001 R Finger2Nub
+    100026: Bip001 R Finger3Nub
+    100028: Bip001 R Finger4Nub
+    100030: Bip001 R Toe0Nub
+    100032: calf_l
+    100034: calf_r
+    100036: clavicle_l
+    100038: clavicle_r
+    100040: Dummy001
+    100042: Dummy002
+    100044: foot_l
+    100046: foot_r
+    100048: //RootNode
+    100050: hand_l
+    100052: hand_r
+    100054: head
+    100056: ik_hand_gun
+    100058: ik_hand_l
+    100060: ik_hand_r
+    100062: ik_hand_root
+    100064: index_01_l
+    100066: index_01_r
+    100068: index_02_l
+    100070: index_02_r
+    100072: index_03_l
+    100074: index_03_r
+    100076: lowerarm_l
+    100078: lowerarm_r
+    100080: middle_01_l
+    100082: middle_01_r
+    100084: middle_02_l
+    100086: middle_02_r
+    100088: middle_03_l
+    100090: middle_03_r
+    100092: neck_01
+    100094: pelvis
+    100096: pinky_01_l
+    100098: pinky_01_r
+    100100: pinky_02_l
+    100102: pinky_02_r
+    100104: pinky_03_l
+    100106: pinky_03_r
+    100108: ring_01_l
+    100110: ring_01_r
+    100112: ring_02_l
+    100114: ring_02_r
+    100116: ring_03_l
+    100118: ring_03_r
+    100120: spine_01
+    100122: spine_02
+    100124: spine_03
+    100126: thigh_l
+    100128: thigh_r
+    100130: thumb_01_l
+    100132: thumb_01_r
+    100134: thumb_02_l
+    100136: thumb_02_r
+    100138: thumb_03_l
+    100140: thumb_03_r
+    100142: upperarm_l
+    100144: upperarm_r
+    100146: root
+    400000: ball_l
+    400002: ball_r
+    400004: Bip001 HeadNub
+    400006: Bip001 L Finger0Nub
+    400008: Bip001 L Finger1Nub
+    400010: Bip001 L Finger2Nub
+    400012: Bip001 L Finger3Nub
+    400014: Bip001 L Finger4Nub
+    400016: Bip001 L Toe0Nub
+    400018: Bip001 Pelvis
+    400020: Bip001 R Finger0Nub
+    400022: Bip001 R Finger1Nub
+    400024: Bip001 R Finger2Nub
+    400026: Bip001 R Finger3Nub
+    400028: Bip001 R Finger4Nub
+    400030: Bip001 R Toe0Nub
+    400032: calf_l
+    400034: calf_r
+    400036: clavicle_l
+    400038: clavicle_r
+    400040: Dummy001
+    400042: Dummy002
+    400044: foot_l
+    400046: foot_r
+    400048: //RootNode
+    400050: hand_l
+    400052: hand_r
+    400054: head
+    400056: ik_hand_gun
+    400058: ik_hand_l
+    400060: ik_hand_r
+    400062: ik_hand_root
+    400064: index_01_l
+    400066: index_01_r
+    400068: index_02_l
+    400070: index_02_r
+    400072: index_03_l
+    400074: index_03_r
+    400076: lowerarm_l
+    400078: lowerarm_r
+    400080: middle_01_l
+    400082: middle_01_r
+    400084: middle_02_l
+    400086: middle_02_r
+    400088: middle_03_l
+    400090: middle_03_r
+    400092: neck_01
+    400094: pelvis
+    400096: pinky_01_l
+    400098: pinky_01_r
+    400100: pinky_02_l
+    400102: pinky_02_r
+    400104: pinky_03_l
+    400106: pinky_03_r
+    400108: ring_01_l
+    400110: ring_01_r
+    400112: ring_02_l
+    400114: ring_02_r
+    400116: ring_03_l
+    400118: ring_03_r
+    400120: spine_01
+    400122: spine_02
+    400124: spine_03
+    400126: thigh_l
+    400128: thigh_r
+    400130: thumb_01_l
+    400132: thumb_01_r
+    400134: thumb_02_l
+    400136: thumb_02_r
+    400138: thumb_03_l
+    400140: thumb_03_r
+    400142: upperarm_l
+    400144: upperarm_r
+    400146: root
+    7400000: GreatSword_Slide_Loop
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: GreatSword_Slide_Loop
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 36
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

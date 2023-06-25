@@ -1,0 +1,247 @@
+fileFormatVersion: 2
+guid: 83a9e91476f608c4f8923941b07bfdc3
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ball_l
+    100002: ball_r
+    100004: Bip001 Footsteps
+    100006: Bip001 HeadNub
+    100008: Bip001 L Finger0Nub
+    100010: Bip001 L Finger1Nub
+    100012: Bip001 L Finger2Nub
+    100014: Bip001 L Finger3Nub
+    100016: Bip001 L Finger4Nub
+    100018: Bip001 L Toe0Nub
+    100020: Bip001 Pelvis
+    100022: Bip001 R Finger0Nub
+    100024: Bip001 R Finger1Nub
+    100026: Bip001 R Finger2Nub
+    100028: Bip001 R Finger3Nub
+    100030: Bip001 R Finger4Nub
+    100032: Bip001 R Toe0Nub
+    100034: calf_l
+    100036: calf_r
+    100038: clavicle_l
+    100040: clavicle_r
+    100042: Dummy001
+    100044: Dummy002
+    100046: Dummy003
+    100048: Dummy004
+    100050: foot_l
+    100052: foot_r
+    100054: //RootNode
+    100056: hand_l
+    100058: hand_r
+    100060: head
+    100062: ik_hand_gun
+    100064: ik_hand_l
+    100066: ik_hand_r
+    100068: ik_hand_root
+    100070: index_01_l
+    100072: index_01_r
+    100074: index_02_l
+    100076: index_02_r
+    100078: index_03_l
+    100080: index_03_r
+    100082: lowerarm_l
+    100084: lowerarm_r
+    100086: middle_01_l
+    100088: middle_01_r
+    100090: middle_02_l
+    100092: middle_02_r
+    100094: middle_03_l
+    100096: middle_03_r
+    100098: neck_01
+    100100: pelvis
+    100102: pinky_01_l
+    100104: pinky_01_r
+    100106: pinky_02_l
+    100108: pinky_02_r
+    100110: pinky_03_l
+    100112: pinky_03_r
+    100114: ring_01_l
+    100116: ring_01_r
+    100118: ring_02_l
+    100120: ring_02_r
+    100122: ring_03_l
+    100124: ring_03_r
+    100126: root
+    100128: spine_01
+    100130: spine_02
+    100132: spine_03
+    100134: thigh_l
+    100136: thigh_r
+    100138: thumb_01_l
+    100140: thumb_01_r
+    100142: thumb_02_l
+    100144: thumb_02_r
+    100146: thumb_03_l
+    100148: thumb_03_r
+    100150: upperarm_l
+    100152: upperarm_r
+    400000: ball_l
+    400002: ball_r
+    400004: Bip001 Footsteps
+    400006: Bip001 HeadNub
+    400008: Bip001 L Finger0Nub
+    400010: Bip001 L Finger1Nub
+    400012: Bip001 L Finger2Nub
+    400014: Bip001 L Finger3Nub
+    400016: Bip001 L Finger4Nub
+    400018: Bip001 L Toe0Nub
+    400020: Bip001 Pelvis
+    400022: Bip001 R Finger0Nub
+    400024: Bip001 R Finger1Nub
+    400026: Bip001 R Finger2Nub
+    400028: Bip001 R Finger3Nub
+    400030: Bip001 R Finger4Nub
+    400032: Bip001 R Toe0Nub
+    400034: calf_l
+    400036: calf_r
+    400038: clavicle_l
+    400040: clavicle_r
+    400042: Dummy001
+    400044: Dummy002
+    400046: Dummy003
+    400048: Dummy004
+    400050: foot_l
+    400052: foot_r
+    400054: //RootNode
+    400056: hand_l
+    400058: hand_r
+    400060: head
+    400062: ik_hand_gun
+    400064: ik_hand_l
+    400066: ik_hand_r
+    400068: ik_hand_root
+    400070: index_01_l
+    400072: index_01_r
+    400074: index_02_l
+    400076: index_02_r
+    400078: index_03_l
+    400080: index_03_r
+    400082: lowerarm_l
+    400084: lowerarm_r
+    400086: middle_01_l
+    400088: middle_01_r
+    400090: middle_02_l
+    400092: middle_02_r
+    400094: middle_03_l
+    400096: middle_03_r
+    400098: neck_01
+    400100: pelvis
+    400102: pinky_01_l
+    400104: pinky_01_r
+    400106: pinky_02_l
+    400108: pinky_02_r
+    400110: pinky_03_l
+    400112: pinky_03_r
+    400114: ring_01_l
+    400116: ring_01_r
+    400118: ring_02_l
+    400120: ring_02_r
+    400122: ring_03_l
+    400124: ring_03_r
+    400126: root
+    400128: spine_01
+    400130: spine_02
+    400132: spine_03
+    400134: thigh_l
+    400136: thigh_r
+    400138: thumb_01_l
+    400140: thumb_01_r
+    400142: thumb_02_l
+    400144: thumb_02_r
+    400146: thumb_03_l
+    400148: thumb_03_r
+    400150: upperarm_l
+    400152: upperarm_r
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
