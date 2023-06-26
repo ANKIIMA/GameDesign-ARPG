@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputController : MonoBehaviour
 {
+
     private Vector2 movement;
     private Vector2 cameraLook;
     private bool lAtk;
