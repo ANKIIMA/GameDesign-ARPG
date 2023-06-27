@@ -58,7 +58,6 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         _camDirection = transform.localPosition.normalized;
-
         _cameraDistance = collisionDistanceRange.y;
     }
 
@@ -73,7 +72,11 @@ public class CameraController : MonoBehaviour
     {
         cameraMovement();
         cameraOcclusion(playerCamera);
-        //CheckCameraCollision(playerCamera);
+    }
+
+    private void OnDrawGizmos()
+    {
+        
     }
 
     #endregion
@@ -117,7 +120,6 @@ public class CameraController : MonoBehaviour
             //Ðý×ª
             currentRotationValue = Vector3.SmoothDamp(currentRotationValue, new Vector3(pitch, yaw, 0f), ref rotationSmoothVelocity, rotationSmoothTime);
             transform.eulerAngles = currentRotationValue;
-            Debug.Log(transform.eulerAngles);
         }
 
         //Î»ÒÆ
@@ -127,16 +129,14 @@ public class CameraController : MonoBehaviour
 
     private void cameraOcclusion(Transform camera)
     {
-        Vector3 desiredCamPosition = transform.TransformPoint(_camDirection * 3f);
-        if (Physics.Linecast(transform.position, desiredCamPosition, out var hit, collisionLayer))
+        Vector3 expectedCameraPosition = transform.TransformPoint(_camDirection * 3f);
+        if (Physics.Linecast(transform.position, expectedCameraPosition, out var hit, collisionLayer))
         {
             _cameraDistance = Mathf.Clamp(hit.distance * .9f, collisionDistanceRange.x, collisionDistanceRange.y);
-
         }
         else
         {
             _cameraDistance = collisionDistanceRange.y;
-
         }
         camera.transform.localPosition = Vector3.Lerp(camera.transform.localPosition, _camDirection * (_cameraDistance - 0.1f), colliderMotionLerpTime * Time.deltaTime);
     }
