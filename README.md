@@ -23,22 +23,24 @@ title 游戏开发里程碑记录表
 dateFormat MM-DD
 
 section 系统设计
-框架分析 :sy-des1, 06-16, 1d
+框架分析 :done, sy-des1, 06-16, 1d
+框架确定 :done, sy-des1, 06-17, 2d
 
 section UI设计
-需求分析 :ui-des1,06-16,1d
-
+需求分析 :done, ui-des1,06-16,1d
+原型UI制作 :done, ui-des2, 06-19, 1d
 
 section 战斗设计
 需求分析 :done,f-des1,06-06,1d
 制作战斗原型 :done, f-des2,06-07,3d
 原型完成 :done, f-des3, after f-des2, 1d
+正式ACT制作 :f-des4, 06-20, 20d
 
 section 关卡设计
-需求分析 :s-des1,06-16,1d
+需求分析 :s-des1,07-01,1d
 
 section 美术设计
-需求分析 :a-des1, 06-16, 1d
+需求分析 :a-des1, 07-01, 1d
 
 ```
 ## 内容和工作分配

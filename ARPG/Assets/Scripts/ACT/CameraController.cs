@@ -47,21 +47,19 @@ public class CameraController : MonoBehaviour
     //裁剪层Mask
     public LayerMask collisionLayer;
 
-    #region 内部函数
+    #region Unity事件函数
     private void Awake()
     {
         playerCamera = Camera.main.transform;
         inputInfo = LookAtPosition.transform.root.GetComponent<PlayerInputController>();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         _camDirection = transform.localPosition.normalized;
         _cameraDistance = collisionDistanceRange.y;
     }
 
-    // Update is called once per frame
     void Update()
     {
         cursorController();
@@ -82,7 +80,7 @@ public class CameraController : MonoBehaviour
     #endregion
 
 
-    #region Update
+    #region 内部方法
     /// <summary>
     /// 管理鼠标
     /// </summary>
@@ -106,9 +104,7 @@ public class CameraController : MonoBehaviour
         pitch = Mathf.Clamp(pitch - inputInfo.CameraLook.y * mouseSensitivity, PitchRange.x, PitchRange.y);
 
     }
-    #endregion
 
-    #region LateUpdate
     
     /// <summary>
     /// 移动相机
@@ -140,6 +136,18 @@ public class CameraController : MonoBehaviour
         }
         camera.transform.localPosition = Vector3.Lerp(camera.transform.localPosition, _camDirection * (_cameraDistance - 0.1f), colliderMotionLerpTime * Time.deltaTime);
     }
+
+
+
+    #endregion
+
+    #region 外部方法
+
+    public void setLookAtPosition(Transform position)
+    {
+        LookAtPosition = position;
+    }
+
 
 
 
