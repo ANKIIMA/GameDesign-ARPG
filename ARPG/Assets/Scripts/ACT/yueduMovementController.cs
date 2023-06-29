@@ -35,8 +35,6 @@ public class yueduMovementController : BasicMovementModel
     [SerializeField] private bool isCrouched;
 
     [SerializeField] private Transform crouchOverheadDetectionPosition;
-
-
     [SerializeField] private LayerMask crouchDetectionLayerMask;
 
     //animationID
@@ -95,7 +93,6 @@ public class yueduMovementController : BasicMovementModel
     {
         if (animator.CheckAnimationTag("CrouchTransition")) return false;
         if (animator.GetFloat(runID) > 0.9f) return false;
-
         return true;
     }
 
@@ -180,6 +177,7 @@ public class yueduMovementController : BasicMovementModel
 
             }
         }
+
 
     }
 

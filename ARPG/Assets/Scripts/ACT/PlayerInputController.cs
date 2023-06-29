@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputController : MonoBehaviour
 {
+    private InputController m_InputController;
 
     private Vector2 movement;
     private Vector2 cameraLook;
@@ -14,18 +15,34 @@ public class PlayerInputController : MonoBehaviour
     private bool roll;
     private bool crouch;
 
-    public Vector2 Movement { get => movement; set => movement = value; }
-    public Vector2 CameraLook { get => cameraLook; set => cameraLook = value; }
-    public bool LAtk { get => lAtk; set => lAtk = value; }
-    public bool RAtk { get => rAtk; set => rAtk = value; }
-    public bool Run { get => run; set => run = value; }
-    public bool Roll { get => roll; set => roll = value; }
-    public bool Crouch { get => crouch; set => crouch = value; }
+    public Vector2 Movement { get => m_InputController.Player.Movement.ReadValue<Vector2>(); }
+    public Vector2 CameraLook { get => m_InputController.Player.CameraLook.ReadValue<Vector2>(); }
+    public bool LAtk { get => m_InputController.Player.LAtk.triggered; }
+    public bool RAtk { get => m_InputController.Player.RAtk.triggered; }
+    public bool Run { get => m_InputController.Player.Run.phase == InputActionPhase.Performed; }
+    public bool Roll { get => m_InputController.Player.Roll.triggered; }
+    public bool Crouch { get => m_InputController.Player.Crouch.triggered; }
 
 
-    #region
+    private void Awake()
+    {
+        if (m_InputController == null)
+            m_InputController = new InputController();
+    }
 
-    public void getMovementInput(InputAction.CallbackContext context)
+    private void OnEnable()
+    {
+        m_InputController.Enable();
+    }
+
+    private void OnDisable()
+    {
+        m_InputController.Disable();
+    }
+
+    #region old way
+
+    /*public void getMovementInput(InputAction.CallbackContext context)
     {
         movement = context.ReadValue<Vector2>();
     }
@@ -58,8 +75,10 @@ public class PlayerInputController : MonoBehaviour
     public void getCrouchInput(InputAction.CallbackContext context)
     {
         crouch = context.ReadValueAsButton();
-    }
+    }*/
 
 
-    #endregion
+    #endregion 
+
+
 }
