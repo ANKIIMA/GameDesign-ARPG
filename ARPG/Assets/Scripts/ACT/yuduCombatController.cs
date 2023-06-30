@@ -27,7 +27,7 @@ public class yuduCombatController : BasicCombatModel
     {
         if (InputController.LAtk)
         {
-            _animator.SetTrigger(lAtkID);
+            animator.SetTrigger(lAtkID);
 
         }
     }
@@ -39,9 +39,9 @@ public class yuduCombatController : BasicCombatModel
 
     private void ActionMotion()
     {
-        if (_animator.CheckAnimationTag("Attack"))
+        if (animator.CheckAnimationTag("Attack"))
         {
-            MovementBase.MoveInterface(transform.forward, _animator.GetFloat(animationMoveID) * attackMoveMult, true);
+            MovementBase.MoveInterface(transform.forward, animator.GetFloat(animationMoveID) * attackMoveMult, true);
         }
     }
 
@@ -53,9 +53,9 @@ public class yuduCombatController : BasicCombatModel
     /// <returns></returns>
     private bool CanAttackLockOn()
     {
-        if (_animator.CheckAnimationTag("Attack"))
+        if (animator.CheckAnimationTag("Attack"))
         {
-            if (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 0.75f)
+            if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 0.75f)
             {
                 return true;
             }
@@ -67,7 +67,7 @@ public class yuduCombatController : BasicCombatModel
     private void DetectionTarget()
     {
         int targetCount = Physics.OverlapSphereNonAlloc(detectionCenter.position, detectionRang, detectionedTarget,
-            enemyLayer);
+            EnemyLayerMask);
 
         //后续功能补充
     }

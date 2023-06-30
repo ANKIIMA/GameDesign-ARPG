@@ -23,7 +23,7 @@ public class GameSoundAssetsSO : ScriptableObject
             if (!assetsDictionary.ContainsKey(assets[i].assetaName))
             {
                 assetsDictionary.Add(assets[i].assetaName,assets[i].assetsClip);
-                Debug.Log(assetsDictionary[assets[i].assetaName].Length);
+                //Debug.Log(assetsDictionary[assets[i].assetaName].Length);
             }
         }
     }
@@ -39,7 +39,7 @@ public class GameSoundAssetsSO : ScriptableObject
             case SoundAssetsType.hSwordWave:
                 return assetsDictionary["HSwordWave"][Random.Range(0, assetsDictionary["Hit"].Length)];
             default:
-                Debug.Log("没找到");
+                //Debug.Log("没找到");
                 return null;
         }
     }

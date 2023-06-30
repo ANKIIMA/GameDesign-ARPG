@@ -26,8 +26,6 @@ public class GameAssets : SingletonBase<GameAssets>
     {
         audioSource.clip = soundAssets.GetClipAssets(soundAssetsType);
         audioSource.Play();
-        Debug.Log(audioSource);
-        Debug.Log(audioSource.clip);
     }
 
     

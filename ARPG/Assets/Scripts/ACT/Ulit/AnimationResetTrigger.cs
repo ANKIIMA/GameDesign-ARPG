@@ -13,6 +13,7 @@ public class AnimationResetTrigger : StateMachineBehaviour
         {
             animator.ResetTrigger(info);
         }
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

@@ -7,7 +7,7 @@ namespace ACT.Combat
 {
     public abstract class BasicCombatModel : MonoBehaviour
     {
-        protected Animator _animator;
+        protected Animator animator;
         protected PlayerInputController InputController;
         protected BasicMovementModel MovementBase;
         protected AudioSource audioSource;
@@ -20,42 +20,44 @@ namespace ACT.Combat
         protected int animationMoveID = Animator.StringToHash("AnimationMove");
 
         //攻击检测
-        [SerializeField, Header("攻击检测")] protected Transform attackDetectionCenter;
-        [SerializeField] protected float attackDetectionRang;
-        [SerializeField] protected LayerMask enemyLayer;
+        [SerializeField, Header("Attack Detection")] protected Transform attackDetectionCenter;
+        [SerializeField] protected float attackDetectionRadius;
+        [SerializeField] protected LayerMask EnemyLayerMask;
 
+        #region Unity事件函数
         protected virtual void Awake()
         {
-            _animator = GetComponent<Animator>();
+            animator = GetComponent<Animator>();
             InputController = GetComponent<PlayerInputController>();
             MovementBase = GetComponent<BasicMovementModel>();
             audioSource = MovementBase.gameObject.GetComponentInChildren<AudioSource>();
         }
 
+        #endregion
 
 
-
-
+        #region 内部方法
         /// <summary>
-        /// 攻击动画攻击检测事件
+        /// 攻击回调函数
         /// </summary>
-        /// <param name="hitName">传递受伤动画名</param>
-        protected virtual void OnAnimationAttackEvent(string hitName)
+        /// <param name="hitAnimationName">传敌人受击动画名称</param>
+        protected virtual void OnAnimationAttackEvent(string hitAnimationName)
         {
-            if (!_animator.CheckAnimationTag("Attack")) return;
+            if (animator.CheckAnimationTag("Attack") == false) return;
 
-            Collider[] attackDetectionTargets = new Collider[4];
+            Collider[] attackDetectionObj = new Collider[4];
 
-            int counts = Physics.OverlapSphereNonAlloc(attackDetectionCenter.position, attackDetectionRang,
-                attackDetectionTargets, enemyLayer);
+            int counts = Physics.OverlapSphereNonAlloc(attackDetectionCenter.position, attackDetectionRadius,
+                attackDetectionObj, EnemyLayerMask);
 
             if (counts > 0)
             {
                 for (int i = 0; i < counts; i++)
                 {
-                    if (attackDetectionTargets[i].TryGetComponent(out IDamager damager))
+                    if (attackDetectionObj[i].TryGetComponent(out IDamager damager))
                     {
-                        damager.TakeDamager(hitName);
+                        //敌人类实现该接口
+                        damager.TakeDamager(hitAnimationName);
 
                     }
                 }
@@ -63,10 +65,12 @@ namespace ACT.Combat
             GameAssets.Instance.PlaySoundEffect(audioSource, SoundAssetsType.swordWave);
         }
 
-        private void OnDrawGizmos()
-        {
-            //Gizmos.DrawWireSphere(attackDetectionCenter.position, attackDetectionRang);
-        }
+        #endregion
+
+        #region 外部方法
+
+        #endregion
+
     }
 
 
