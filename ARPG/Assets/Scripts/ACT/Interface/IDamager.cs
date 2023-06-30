@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public interface IDamagar
+public interface IDamager
 {
     void TakeDamager(float damager);
     void TakeDamager(string hitAnimationName);
