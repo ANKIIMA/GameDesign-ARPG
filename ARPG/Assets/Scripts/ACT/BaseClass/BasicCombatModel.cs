@@ -49,14 +49,15 @@ namespace ACT.Combat
 
             int counts = Physics.OverlapSphereNonAlloc(attackDetectionCenter.position, attackDetectionRadius,
                 attackDetectionObj, EnemyLayerMask);
-
+            
             if (counts > 0)
             {
                 for (int i = 0; i < counts; i++)
                 {
                     if (attackDetectionObj[i].TryGetComponent(out IDamager damager))
                     {
-                        //敌人类实现该接口
+                        Debug.Log(attackDetectionObj[i].name);
+                        Debug.Log(hitAnimationName);
                         damager.TakeDamager(hitAnimationName);
 
                     }

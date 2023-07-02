@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: b285d65889a8c414784007cbd6eb7bcc
 ModelImporter:
-  serializedVersion: 19301
+  serializedVersion: 20300
   internalIDToNameTable:
   - first:
       1: 100000
@@ -623,7 +623,7 @@ ModelImporter:
       events:
       - time: 0.16890077
         functionName: OnAnimationAttackEvent
-        data: Hit_H_Right
+        data: Hit_L2R
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
@@ -812,6 +812,7 @@ ModelImporter:
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 1
     skinWeightsMode: 0
     maxBonesPerVertex: 4
@@ -821,6 +822,9 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -1676,6 +1680,8 @@ ModelImporter:
   animationType: 3
   humanoidOversampling: 1
   avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
