@@ -14,7 +14,7 @@ public class yuduCombatController : BasicCombatModel
     [SerializeField] private float detectionRadius;
 
     //Weapon
-    [SerializeField] private int weaponIndex;
+    [SerializeField] private bool weaponIndex;
 
 
     //Buffer
@@ -29,14 +29,25 @@ public class yuduCombatController : BasicCombatModel
 
     private void UpdateAttackAnimation()
     {
+        //Left Attack
         if (InputController.LAtk)
         {
             animator.SetTrigger(lAtkID);
-
-
         }
-        
-        
+
+        //Equip Secondary Weapon
+        if(InputController.WeaponSwitch)
+        {
+            if(weaponIndex == false)
+            {
+                weaponIndex = true;
+            }
+            else
+            {
+                weaponIndex = false;
+            }
+        }
+        animator.SetBool(sWeaponID, weaponIndex);
     }
 
 
