@@ -39,6 +39,8 @@ namespace ACT.Move
         protected int horizontalID = Animator.StringToHash("Horizontal");
         protected int verticalID = Animator.StringToHash("Vertical");
         protected int runID = Animator.StringToHash("Run");
+        protected int rollID = Animator.StringToHash("Roll");
+        protected int animationMoveID = Animator.StringToHash("AnimationMove");
 
         #region UnityÊÂ¼þº¯Êý
         protected virtual void Awake()

@@ -25,6 +25,7 @@ public class yueduMovementController : BasicMovementModel
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
     [SerializeField] private float crouchMoveSpeed;
+    [SerializeField] private float animationRootMoveScale;
 
 
     [SerializeField, Header("Crouch")] private Vector3 crouchCenter;
@@ -36,6 +37,7 @@ public class yueduMovementController : BasicMovementModel
 
     [SerializeField] private Transform crouchOverheadDetectionPosition;
     [SerializeField] private LayerMask crouchDetectionLayerMask;
+
 
     //animationID
     private int crouchID = Animator.StringToHash("Crouch");
@@ -62,6 +64,7 @@ public class yueduMovementController : BasicMovementModel
         base.Update();
 
         playerTransform();
+        playerRoll();
     }
 
     private void LateUpdate()
@@ -69,8 +72,6 @@ public class yueduMovementController : BasicMovementModel
         playerCrouch();
         UpdateMotionAnimation();
         UpdateCrouchAnimation();
-        UpdateRollAnimation();
-
     }
     #endregion
 
@@ -215,9 +216,18 @@ public class yueduMovementController : BasicMovementModel
     /// <summary>
     /// 更新翻滚的动画状态
     /// </summary>
-    private void UpdateRollAnimation()
+    private void playerRoll()
     {
+        if(inputController.Roll)
+        {
+            animator.SetTrigger(rollID);
+            
+        }
 
+        if (animator.CheckAnimationTag("Roll"))
+        {
+            MoveInterface(transform.forward, animator.GetFloat(animationMoveID) * animationRootMoveScale, true);
+        }
     }
 
     /// <summary>

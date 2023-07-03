@@ -6,30 +6,37 @@ using ACT.Combat;
 public class yuduCombatController : BasicCombatModel
 {
     //Speed
-    [SerializeField, Header("攻击移动速度倍率"), Range(.1f, 10f)]
-    private float attackMoveMult;
+    [SerializeField, Header("AnimationRootAttackScale"), Range(.1f, 10f)]
+    private float animationRootAttackScale;
 
-    //检测
-    [SerializeField, Header("检测敌人")] private Transform detectionCenter;
-    [SerializeField] private float detectionRang;
+    //Detectoin
+    [SerializeField, Header("Enemy Detection")] private Transform detectionCenter;
+    [SerializeField] private float detectionRadius;
 
-    //缓存
+    //Weapon
+    [SerializeField] private int weaponIndex;
+
+
+    //Buffer
     private Collider[] detectionedTarget = new Collider[1];
 
     private void Update()
     {
-        PlayerAttackAction();
+        UpdateAttackAnimation();
         DetectionTarget();
         ActionMotion();
     }
 
-    private void PlayerAttackAction()
+    private void UpdateAttackAnimation()
     {
         if (InputController.LAtk)
         {
             animator.SetTrigger(lAtkID);
 
+
         }
+        
+        
     }
 
 
@@ -41,7 +48,7 @@ public class yuduCombatController : BasicCombatModel
     {
         if (animator.CheckAnimationTag("Attack"))
         {
-            MovementBase.MoveInterface(transform.forward, animator.GetFloat(animationMoveID) * attackMoveMult, true);
+            MovementBase.MoveInterface(transform.forward, animator.GetFloat(animationMoveID) * animationRootAttackScale, true);
         }
     }
 
@@ -66,7 +73,7 @@ public class yuduCombatController : BasicCombatModel
 
     private void DetectionTarget()
     {
-        int targetCount = Physics.OverlapSphereNonAlloc(detectionCenter.position, detectionRang, detectionedTarget,
+        int targetCount = Physics.OverlapSphereNonAlloc(detectionCenter.position, detectionRadius, detectionedTarget,
             EnemyLayerMask);
 
         //后续功能补充
