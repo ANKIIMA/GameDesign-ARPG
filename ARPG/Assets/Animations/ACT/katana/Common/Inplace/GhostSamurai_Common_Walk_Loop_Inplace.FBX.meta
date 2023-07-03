@@ -507,32 +507,11 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
-      copied configuration does not match position in animation file:\n\t'calf_l'
-      : position error = 1.030195 mm\n\t'foot_l' : position error = 2.086099 mm\n\t'calf_r'
-      : position error = 3.174551 mm\n\t'foot_r' : position error = 1.188794 mm\n"
+    rigImportErrors: "Copied Avatar Rig Configuration mis-match. Transform hierarchy
+      does not match:\n\tTransform 'Bip001 Pelvis' for human bone 'Hips' not found\n"
+    rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'GhostSamurai_Common_Walk_Inplace' has import
-      animation warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'spine_01' has translation
-      animation that will be discarded.\n\t'clavicle_l' has translation animation
-      that will be discarded.\n\t'upperarm_l' has translation animation that will
-      be discarded.\n\t'lowerarm_l' has translation animation that will be discarded.\n\t'hand_l'
-      has translation animation that will be discarded.\n\t'index_02_l' has translation
-      animation that will be discarded.\n\t'middle_02_l' has translation animation
-      that will be discarded.\n\t'pinky_01_l' has translation animation that will
-      be discarded.\n\t'ring_01_l' has translation animation that will be discarded.\n\t'clavicle_r'
-      has translation animation that will be discarded.\n\t'upperarm_r' has translation
-      animation that will be discarded.\n\t'lowerarm_r' has translation animation
-      that will be discarded.\n\t'hand_r' has translation animation that will be
-      discarded.\n\t'index_02_r' has translation animation that will be discarded.\n\t'middle_02_r'
-      has translation animation that will be discarded.\n\t'calf_l' has translation
-      animation that will be discarded.\n\t'foot_l' has translation animation that
-      will be discarded.\n\t'ball_l' has translation animation that will be discarded.\n\t'calf_r'
-      has translation animation that will be discarded.\n\t'foot_r' has translation
-      animation that will be discarded.\n\t'ball_r' has translation animation that
-      will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0

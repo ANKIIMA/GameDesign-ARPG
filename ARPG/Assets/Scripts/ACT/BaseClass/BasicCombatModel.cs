@@ -56,8 +56,6 @@ namespace ACT.Combat
                 {
                     if (attackDetectionObj[i].TryGetComponent(out IDamager damager))
                     {
-                        Debug.Log(attackDetectionObj[i].name);
-                        Debug.Log(hitAnimationName);
                         damager.TakeDamager(hitAnimationName);
 
                     }
