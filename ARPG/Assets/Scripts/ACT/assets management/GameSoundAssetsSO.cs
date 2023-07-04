@@ -5,7 +5,7 @@ public enum SoundAssetsType
 {
     hit,
     swordWave,
-    hSwordWave
+    gSwordWave
 }
 
 [CreateAssetMenu(fileName = "New SoundAssets",menuName = "CreataAssets/Sound")]
@@ -35,11 +35,11 @@ public class GameSoundAssetsSO : ScriptableObject
             case SoundAssetsType.hit:
                 return assetsDictionary["Hit"][Random.Range(0, assetsDictionary["Hit"].Length)];
             case SoundAssetsType.swordWave:
-                return assetsDictionary["SwordWave"][Random.Range(0, assetsDictionary["Hit"].Length)];
-            case SoundAssetsType.hSwordWave:
-                return assetsDictionary["HSwordWave"][Random.Range(0, assetsDictionary["Hit"].Length)];
+                return assetsDictionary["SwordWave"][Random.Range(0, assetsDictionary["SwordWave"].Length)];
+            case SoundAssetsType.gSwordWave:
+                return assetsDictionary["GSwordWave"][Random.Range(0, assetsDictionary["GSwordWave"].Length)];
             default:
-                //Debug.Log("没找到");
+                Debug.Log("没找到");
                 return null;
         }
     }

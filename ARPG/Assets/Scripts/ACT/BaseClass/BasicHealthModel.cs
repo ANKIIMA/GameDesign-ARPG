@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace ACT.Health
 {
-    public abstract class BasicHealthModel : MonoBehaviour, IDamager
+    public abstract class BasicHealthModel : MonoBehaviour, TakeDamagerInterface
     {
         
         //引用

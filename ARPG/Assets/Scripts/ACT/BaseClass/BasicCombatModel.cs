@@ -44,7 +44,7 @@ namespace ACT.Combat
         /// <param name="hitAnimationName">传敌人受击动画名称</param>
         protected virtual void OnAnimationAttackEvent(string hitAnimationName)
         {
-            if (animator.CheckAnimationTag("Attack") == false) return;
+            if (animator.CheckAnimationTag("Attack") == false && animator.CheckAnimationTag("GSAttack") == false) return;
 
             Collider[] attackDetectionObj = new Collider[4];
 
@@ -55,14 +55,30 @@ namespace ACT.Combat
             {
                 for (int i = 0; i < counts; i++)
                 {
-                    if (attackDetectionObj[i].TryGetComponent(out IDamager damager))
+                    if (attackDetectionObj[i].TryGetComponent(out TakeDamagerInterface damager))
                     {
                         damager.TakeDamager(hitAnimationName);
 
                     }
                 }
             }
-            GameAssets.Instance.PlaySoundEffect(audioSource, SoundAssetsType.swordWave);
+            PlayAttackSound();
+        }
+
+        /// <summary>
+        /// 管理攻击音效
+        /// </summary>
+        private void PlayAttackSound()
+        {
+            if(animator.CheckAnimationTag("Attack"))
+            {
+                GameAssets.Instance.PlaySoundEffect(audioSource, SoundAssetsType.swordWave);
+            }
+            
+            else if(animator.CheckAnimationTag("GSAttack"))
+            {
+                GameAssets.Instance.PlaySoundEffect(audioSource, SoundAssetsType.gSwordWave);
+            }
         }
 
         #endregion

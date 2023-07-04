@@ -57,7 +57,7 @@ public class yuduCombatController : BasicCombatModel
 
     private void ActionMotion()
     {
-        if (animator.CheckAnimationTag("Attack"))
+        if (animator.CheckAnimationTag("Attack") || animator.CheckAnimationTag("GSAttack"))
         {
             MovementBase.MoveInterface(transform.forward, animator.GetFloat(animationMoveID) * animationRootAttackScale, true);
         }
