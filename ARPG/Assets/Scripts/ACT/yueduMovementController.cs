@@ -82,7 +82,7 @@ public class yueduMovementController : BasicMovementModel
     /// <returns></returns>
     private bool isAbletoMove()
     {
-        return (isGrounded == true && animator.CheckAnimationTag("NormalMotion") || animator.CheckAnimationTag("CrouchMotion"));
+        return (isGrounded == true && animator.CheckAnimationTag("NormalMotion") || animator.CheckAnimationTag("CrouchMotion") || animator.CheckAnimationTag("GSMotion"));
 
     }
 
