@@ -575,7 +575,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves:
-      - name: Curve
+      - name: AnimationMove
         curve:
           serializedVersion: 2
           curve:
@@ -593,19 +593,19 @@ ModelImporter:
             value: 10
             inSlope: 0
             outSlope: 0
-            tangentMode: 0
+            tangentMode: 1
             weightedMode: 0
             inWeight: 0
             outWeight: 0
           - serializedVersion: 3
-            time: 0.77777773
-            value: 0
-            inSlope: Infinity
-            outSlope: Infinity
-            tangentMode: 103
+            time: 0.6195718
+            value: 3.4881287
+            inSlope: -30.427374
+            outSlope: -30.427374
+            tangentMode: 0
             weightedMode: 0
             inWeight: 0
-            outWeight: 0
+            outWeight: 0.10824968
           - serializedVersion: 3
             time: 1
             value: 0

@@ -540,20 +540,20 @@ ModelImporter:
             time: 0.0034722222
             value: 10
             inSlope: Infinity
-            outSlope: Infinity
-            tangentMode: 103
+            outSlope: 3.8465714
+            tangentMode: 7
             weightedMode: 0
             inWeight: 0
-            outWeight: 0
+            outWeight: 0.08167756
           - serializedVersion: 3
-            time: 0.7569445
-            value: 0
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
+            time: 0.6265084
+            value: 4.668103
+            inSlope: -22.583317
+            outSlope: -33.485558
+            tangentMode: 1
             weightedMode: 0
-            inWeight: 0
-            outWeight: 0
+            inWeight: 0.06489593
+            outWeight: 0.09766289
           - serializedVersion: 3
             time: 1
             value: 0

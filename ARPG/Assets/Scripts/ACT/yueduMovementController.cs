@@ -22,10 +22,10 @@ public class yueduMovementController : BasicMovementModel
 
 
     //Move Speed
-    [SerializeField] private float walkSpeed;
+    [SerializeField, Header("Move Speed")] private float walkSpeed;
     [SerializeField] private float runSpeed;
     [SerializeField] private float crouchMoveSpeed;
-    [SerializeField] private float animationRootMoveScale;
+    [SerializeField] private float animationRootRollMoveScale;
 
 
     [SerializeField, Header("Crouch")] private Vector3 crouchCenter;
@@ -226,7 +226,7 @@ public class yueduMovementController : BasicMovementModel
 
         if (animator.CheckAnimationTag("Roll"))
         {
-            MoveInterface(transform.forward, animator.GetFloat(animationMoveID) * animationRootMoveScale, true);
+            MoveInterface(transform.forward, animator.GetFloat(animationMoveID) * animationRootRollMoveScale, true);
         }
     }
 
