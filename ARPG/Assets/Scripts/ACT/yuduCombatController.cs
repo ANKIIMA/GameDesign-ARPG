@@ -40,11 +40,43 @@ public class yuduCombatController : BasicCombatModel
 
 
     #region 内部函数
+
+    /// <summary>
+    /// 判断是否能够输入攻击
+    /// </summary>
+    /// <returns></returns>
+    private bool CanInputAttack()
+    {
+        //bug: 不足0.25的标准化时间也会发生状态转移？
+        if (animator.CheckCurrentAnimationTagTimeIsGreater("Attack", 0.22f))
+        {
+            return true;
+        }
+        if (animator.CheckCurrentAnimationTagTimeIsGreater("GSAttack", 0.30f))
+        {
+            return true;
+        }
+
+        if (animator.CheckAnimationTag("NormalMotion") || animator.CheckAnimationTag("GSMotion")) return true;
+
+
+        //已解决 Trigger未重置 导致状态机的Trigger和理想情况不一致
+        //原本返回false后经过多次点击Trigger实际值仍然是true
+        animator.ResetTrigger(lAtkID);
+        animator.ResetTrigger(rAtkID);
+        return false;
+    }
+
+
     /// <summary>
     /// 更新攻击动画
     /// </summary>
     private void UpdateAttackAnimation()
     {
+        if (CanInputAttack() == false)
+        {
+            return;
+        }
         //Left Attack
         if (InputController.LAtk)
         {
@@ -52,9 +84,9 @@ public class yuduCombatController : BasicCombatModel
         }
 
         //Equip Secondary Weapon
-        if(InputController.WeaponSwitch)
+        if (InputController.WeaponSwitch)
         {
-            if(weaponIndex == false)
+            if (weaponIndex == false)
             {
                 weaponIndex = true;
             }

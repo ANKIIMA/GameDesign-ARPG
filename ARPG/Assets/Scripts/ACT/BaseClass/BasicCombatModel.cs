@@ -19,6 +19,7 @@ namespace ACT.Combat
         protected int defenID = Animator.StringToHash("Defen");
         protected int animationMoveID = Animator.StringToHash("AnimationMove");
         protected int sWeaponID = Animator.StringToHash("SWeapon");
+        protected int lockOnID = Animator.StringToHash("LockOn");
 
         //¹¥»÷¼ì²â
         [SerializeField, Header("Attack Detection")] protected Transform attackDetectionCenter;

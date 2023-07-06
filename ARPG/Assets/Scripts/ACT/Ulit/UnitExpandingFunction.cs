@@ -45,4 +45,72 @@ public static class UnitExpandingFunction
         
         return  Quaternion.Lerp(self.rotation,newRotation,lerpTime * Time.deltaTime);
     }
+
+    /// <summary>
+    /// 检查当前播放时间是否大于给定时间
+    /// </summary>
+    /// <param name="animator"></param>
+    /// <param name="tagName">状态标签</param>
+    /// <param name="time">给定时间</param>
+    /// <returns></returns>
+    public static bool CheckCurrentAnimationTagTimeIsGreater(this Animator animator, string tagName, float time)
+    {
+        if(animator.CheckAnimationTag(tagName))
+        {
+            return animator.GetCurrentAnimatorStateInfo(0).normalizedTime > time ? true : false;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// 检查当前播放时间是否大于给定时间
+    /// </summary>
+    /// <param name="animator"></param>
+    /// <param name="tagName">状态标签</param>
+    /// <param name="time">给定时间</param>
+    /// <returns></returns>
+    public static bool CheckCurrentAnimationNameTimeIsGreater(this Animator animator, string name, float time)
+    {
+        if (animator.CheckAnimationTag(name))
+        {
+            return animator.GetCurrentAnimatorStateInfo(0).normalizedTime > time ? true : false;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// 检查当前播放时间是否小于给定时间
+    /// </summary>
+    /// <param name="animator"></param>
+    /// <param name="tagName">状态标签</param>
+    /// <param name="time">给定时间</param>
+    /// <returns></returns>
+    public static bool CheckCurrentAnimationTagTimeIsLower(this Animator animator, string tagName, float time)
+    {
+        if (animator.CheckAnimationTag(tagName))
+        {
+            return animator.GetCurrentAnimatorStateInfo(0).normalizedTime < time ? true : false;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// 检查当前播放时间是否小于给定时间
+    /// </summary>
+    /// <param name="animator"></param>
+    /// <param name="tagName">状态标签</param>
+    /// <param name="time">给定时间</param>
+    /// <returns></returns>
+    public static bool CheckCurrentAnimationNameTimeIsLower(this Animator animator, string name, float time)
+    {
+        if (animator.CheckAnimationName(name))
+        {
+            return animator.GetCurrentAnimatorStateInfo(0).normalizedTime < time ? true : false;
+        }
+
+        return false;
+    }
 }

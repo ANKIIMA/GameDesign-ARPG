@@ -5,6 +5,7 @@ using ACT.Combat;
 
 public class AICombat : BasicCombatModel
 {
+
     [SerializeField, Header("Target Detection")] private Transform detectionCenter;
     [SerializeField] private float detectionRadius;
     [SerializeField] private float viewFieldCosValue;
@@ -15,10 +16,14 @@ public class AICombat : BasicCombatModel
 
     [SerializeField, Header("Current Target")] private Transform currentTarget;
 
-    #region 外部函数
+    public Transform CurrentTarget { get => currentTarget; set => currentTarget = value; }
+
+    #region Unity事件函数
     private void Update()
     {
         AIView();
+        LockOnTarget();
+        UpdateAnimationMove();
     }
 
     private void OnDrawGizmos()
@@ -53,11 +58,46 @@ public class AICombat : BasicCombatModel
         }
     }
 
+    private void LockOnTarget()
+    {
+        if (currentTarget != null && animator.CheckAnimationTag("NormalMotion"))
+        {
+            animator.SetFloat(lockOnID, 1f);
+            transform.rotation = transform.LockOnTarget(currentTarget, transform.root.transform, 100f);
+        }
+        else
+        {
+            animator.SetFloat(lockOnID, 0f);
+        }
+    }
+
+    private void UpdateAnimationMove()
+    {
+        if(animator.CheckAnimationTag("Slide") == true)
+        {
+            MovementBase.MoveInterface(transform.root.transform.forward, animator.GetFloat(animationMoveID), true);
+        }
+    }
+
 
 
 
     #endregion
 
+    #region 外部函数
 
+    public Transform GetCurrentTarget()
+    {
+        if(currentTarget == null)
+        {
+            return null;
+        }
+
+        return currentTarget;
+    }
+
+    public float GetCurrentTargetDistance() => Vector3.Distance(currentTarget.position, transform.root.position);
+    public Vector3 GetDirectionToTarget() => (currentTarget.position - transform.root.position).normalized;
+    #endregion
 
 }

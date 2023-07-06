@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ACT.Move;
 
-namespace ACT.Move
-{
     public class AIMovement : BasicMovementModel
     {
         protected override void Update()
@@ -20,5 +19,3 @@ namespace ACT.Move
             characterController.Move(Time.deltaTime * verticalDirection);
         }
     }
-
-}
