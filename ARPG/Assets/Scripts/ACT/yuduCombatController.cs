@@ -5,6 +5,9 @@ using ACT.Combat;
 
 public class yuduCombatController : BasicCombatModel
 {
+    //ref
+    [SerializeField] private Transform currentTarget;
+
     //Speed
     [SerializeField, Header("AnimationRootAttackScale"), Range(.1f, 10f)]
     private float animationRootAttackScale;
@@ -20,13 +23,26 @@ public class yuduCombatController : BasicCombatModel
     //Buffer
     private Collider[] detectionedTarget = new Collider[1];
 
+    #region Unity事件函数
     private void Update()
     {
         UpdateAttackAnimation();
-        DetectionTarget();
         ActionMotion();
+        DetectionTarget();
+        UpdateCurrentTarget();
     }
 
+    private void LateUpdate()
+    {
+        OnAttackAutoLockOn();
+    }
+    #endregion
+
+
+    #region 内部函数
+    /// <summary>
+    /// 更新攻击动画
+    /// </summary>
     private void UpdateAttackAnimation()
     {
         //Left Attack
@@ -51,10 +67,9 @@ public class yuduCombatController : BasicCombatModel
     }
 
 
-
-
-
-
+    /// <summary>
+    /// 控制攻击时的移动
+    /// </summary>
     private void ActionMotion()
     {
         if (animator.CheckAnimationTag("Attack") || animator.CheckAnimationTag("GSAttack"))
@@ -63,15 +78,31 @@ public class yuduCombatController : BasicCombatModel
         }
     }
 
-    #region 动作检测
+
+    #region 攻击自动索敌
+    /// <summary>
+    /// 旋转到锁定对象
+    /// </summary>
+    private void OnAttackAutoLockOn()
+    {
+        if(CanAttackLockOn())
+        {
+            if (animator.CheckAnimationTag("Attack") || animator.CheckAnimationTag("GSAttack"))
+            {
+                transform.root.transform.rotation = transform.LockOnTarget(currentTarget, transform.root.transform, 50f);
+            }
+        }
+    }
+
+
 
     /// <summary>
-    /// 攻击状态是否允许自动锁定敌人
+    /// 判断攻击状态是否允许自动锁定敌人
     /// </summary>
     /// <returns></returns>
     private bool CanAttackLockOn()
     {
-        if (animator.CheckAnimationTag("Attack"))
+        if (animator.CheckAnimationTag("Attack") || animator.CheckAnimationTag("GSAttack"))
         {
             if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 0.75f)
             {
@@ -82,13 +113,48 @@ public class yuduCombatController : BasicCombatModel
     }
 
 
+    /// <summary>
+    /// 检测前方敌人
+    /// </summary>
     private void DetectionTarget()
     {
         int targetCount = Physics.OverlapSphereNonAlloc(detectionCenter.position, detectionRadius, detectionedTarget,
             EnemyLayerMask);
 
-        //后续功能补充
+        if(targetCount > 0)
+        {
+            SetCurrentTarget(detectionedTarget[0].transform);
+        }
+        
     }
+
+    /// <summary>
+    /// 设置当前锁定目标
+    /// </summary>
+    /// <param name="target">锁定对象</param>
+    private void SetCurrentTarget(Transform target)
+    {
+        if(currentTarget == null || currentTarget != target)
+        {
+            currentTarget = target;
+        }
+    }
+
+    /// <summary>
+    /// 更新锁定状态
+    /// 移动时不能自动锁定
+    /// </summary>
+    private void UpdateCurrentTarget()
+    {
+        if(animator.CheckAnimationTag("NormalMotion") || animator.CheckAnimationTag("GSMotion"))
+        {
+            if(InputController.Movement.sqrMagnitude > 0)
+            {
+                currentTarget = null;
+            }
+        }
+    }
+    #endregion
 
     #endregion
 }

@@ -9,7 +9,7 @@ namespace ACT.Health
     {
         
         //引用
-        protected Animator _animator;
+        protected Animator animator;
         protected BasicMovementModel movementModel;
         protected BasicCombatModel combatModel;
         protected AudioSource _audioSource;
@@ -26,7 +26,7 @@ namespace ACT.Health
 
         protected virtual void Awake()
         {
-            _animator = GetComponentInChildren<Animator>();
+            animator = GetComponentInChildren<Animator>();
             movementModel = GetComponent<BasicMovementModel>();
             combatModel = GetComponentInChildren<BasicCombatModel>();
             _audioSource = movementModel.GetComponentInChildren<AudioSource>();
@@ -51,8 +51,8 @@ namespace ACT.Health
 
         protected virtual void HitAnimaitonMove()
         {
-            if(!_animator.CheckAnimationTag("Hit")) return;
-            movementModel.MoveInterface(transform.forward,_animator.GetFloat(animationMoveID) * hitAnimationMoveMult,true);
+            if(!animator.CheckAnimationTag("Hit")) return;
+            movementModel.MoveInterface(transform.forward,animator.GetFloat(animationMoveID) * hitAnimationMoveMult,true);
         }
 
         #region 接口
@@ -64,8 +64,7 @@ namespace ACT.Health
 
         public virtual void TakeDamager(string hitAnimationName)
         {
-            _animator.Play(hitAnimationName,0,0f);
-            GameAssets.Instance.PlaySoundEffect(_audioSource,SoundAssetsType.hit);
+            
         }
 
         public virtual void TakeDamager(float damager, string hitAnimationName)
@@ -75,7 +74,6 @@ namespace ACT.Health
 
         public virtual void TakeDamager(float damagar, string hitAnimationName, Transform attacker)
         {
-            SetAttacker(attacker);
             
         }
 
