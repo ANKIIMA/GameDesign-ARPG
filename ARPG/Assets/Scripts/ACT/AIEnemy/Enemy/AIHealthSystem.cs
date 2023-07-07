@@ -18,6 +18,8 @@ namespace ACT.Health
             animator.Play(hitAnimationName, 0, 0f);
             GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.hit);
 
+            
+
         }
 
         private void OnHitAnimationRotation()

@@ -1,0 +1,34 @@
+Frost - Complete UI (v1.1.6)
+
+Import TextMeshPro and its essentials from Package Manager if you haven't already!
+If you want to disable tooltips, delete Tooltip Manager script from Menu Manager, then delete Tooltip object from hierarchy.
+
+Special thanks to:
+koshik (Unity forums)
+Ziboo (Unity forums)
+
+Contact me via:
+E-mail: isa.steam@outlook.com
+Website: https://www.michsky.com
+Discord: https://discord.gg/VXpHyUt
+YouTube: https://www.youtube.com/c/michsky
+Steam: https://steamcommunity.com/id/geezjesus
+Unity Connect: https://connect.unity.com/u/isa-kocak-1
+
+Changelog v1.1.6
+------------------------
+• 2019.1 compatibility
+• Added customizable blur system
+• Optimized some animations
+• Fixed minor bugs
+------------------------
+
+Changelog v1.1.3
+------------------------
+• Added smart tooltip system
+• Added splash screen & login screen
+• Improved horizontal selectors
+• Optimized some scripts
+• Fixed some warnings
+• Fixed minor bugs
+------------------------

@@ -23,6 +23,13 @@ namespace ACT.Health
         //HitAnimationMoveSpeedMult
         public float hitAnimationMoveMult;
 
+        //属性值
+        protected float HealthValue;
+        protected float EnduranceValue;
+        protected float AttackPower;
+        protected float normalAttackCost;
+        
+
 
         protected virtual void Awake()
         {
