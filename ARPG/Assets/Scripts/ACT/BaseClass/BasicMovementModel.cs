@@ -64,7 +64,7 @@ namespace ACT.Move
         private void OnDrawGizmosSelected()
         {
 
-            //绘制地面检测的范围
+            /*//绘制地面检测的范围
             if (isGrounded == true)
                 Gizmos.color = Color.green;
             else
@@ -75,7 +75,7 @@ namespace ACT.Move
             position.Set(transform.position.x, transform.position.y - dectectionYOffset,
                 transform.position.z);
 
-            Gizmos.DrawWireSphere(position, SlopeDetectionRayDistance);
+            Gizmos.DrawWireSphere(position, SlopeDetectionRayDistance);*/
 
         }
         #endregion

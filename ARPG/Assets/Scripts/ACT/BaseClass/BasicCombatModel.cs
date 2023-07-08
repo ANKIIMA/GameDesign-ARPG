@@ -58,6 +58,7 @@ namespace ACT.Combat
                 {
                     if (attackDetectionObj[i].TryGetComponent(out TakeDamagerInterface damager))
                     {
+
                         damager.TakeDamager(0f, hitAnimationName, transform.root.transform);
 
                     }

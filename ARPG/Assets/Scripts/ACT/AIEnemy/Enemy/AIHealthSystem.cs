@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ACT.Health;
 
-namespace ACT.Health
-{
+
     public class AIHealthSystem : BasicHealthModel
     {
         private void LateUpdate()
@@ -11,15 +11,21 @@ namespace ACT.Health
             OnHitAnimationRotation(); 
         }
 
-
-        public override void TakeDamager(float damagar, string hitAnimationName, Transform attacker)
+        /// <summary>
+        /// 接受伤害
+        /// </summary>
+        /// <param name="damager">伤害值</param>
+        /// <param name="hitAnimationName">受伤动画</param>
+        /// <param name="attacker">攻击者</param>
+        public override void TakeDamager(float damager, string hitAnimationName, Transform attacker)
         {
-            SetAttacker(attacker);
-            animator.Play(hitAnimationName, 0, 0f);
-            GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.hit);
-
-            
-
+        base.TakeDamager(damager, hitAnimationName, attacker);
+        if(attacker.TryGetComponent<yueduHealthController>(out yueduHealthController healthController))
+        {
+            damager = healthController.GetAttackDamage();
+        }
+        healthValue -= damager;
+        uiManagement.OnEnemyHealthValueChange(this.CalHealthValuePercentage());
         }
 
         private void OnHitAnimationRotation()
@@ -29,7 +35,4 @@ namespace ACT.Health
                 transform.rotation = transform.LockOnTarget(currentAttacker, transform, 50f);
             }
         }
-
-    }
-
 }

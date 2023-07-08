@@ -15,6 +15,7 @@ public class PlayerInputController : MonoBehaviour
     private bool roll;
     private bool crouch;
     private bool weaponSwitch;
+    private bool interact;
 
     public Vector2 Movement { get => m_InputController.Player.Movement.ReadValue<Vector2>(); }
     public Vector2 CameraLook { get => m_InputController.Player.CameraLook.ReadValue<Vector2>(); }
@@ -24,6 +25,7 @@ public class PlayerInputController : MonoBehaviour
     public bool Roll { get => m_InputController.Player.Roll.triggered; }
     public bool Crouch { get => m_InputController.Player.Crouch.triggered; }
     public bool WeaponSwitch { get => m_InputController.Player.WeaponSwitch.triggered; }
+    public bool Interact { get => m_InputController.Player.Interact.triggered; }
 
 
     private void Awake()

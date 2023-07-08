@@ -5,14 +5,16 @@ using UnityEngine;
 
 namespace ACT.Health
 {
+
     public abstract class BasicHealthModel : MonoBehaviour, TakeDamagerInterface
     {
-        
-        //引用
+
+        //ref
         protected Animator animator;
         protected BasicMovementModel movementModel;
         protected BasicCombatModel combatModel;
         protected AudioSource _audioSource;
+        [SerializeField] protected UIManagement uiManagement;
         
         //攻击者
         protected Transform currentAttacker;
@@ -24,11 +26,12 @@ namespace ACT.Health
         public float hitAnimationMoveMult;
 
         //属性值
-        protected float HealthValue;
-        protected float EnduranceValue;
-        protected float AttackPower;
-        protected float normalAttackCost;
-        
+        [SerializeField] protected float healthValue;
+        [SerializeField] protected float fullHealthValue;
+        [SerializeField] protected float enduranceValue;
+        [SerializeField] protected float fullEnduranceValue;
+        [SerializeField] protected float normalAttackPower;
+        [SerializeField] protected float normalAttackCost;
 
 
         protected virtual void Awake()
@@ -56,6 +59,16 @@ namespace ACT.Health
                 currentAttacker = attacker;
         }
 
+        public virtual float CalHealthValuePercentage()
+        {
+            return healthValue / fullHealthValue;
+        }
+
+        public virtual float GetAttackDamage()
+        {
+            return normalAttackPower;
+        }
+
         protected virtual void HitAnimaitonMove()
         {
             if(!animator.CheckAnimationTag("Hit")) return;
@@ -79,8 +92,11 @@ namespace ACT.Health
             throw new NotImplementedException();
         }
 
-        public virtual void TakeDamager(float damagar, string hitAnimationName, Transform attacker)
+        public virtual void TakeDamager(float damager, string hitAnimationName, Transform attacker)
         {
+            SetAttacker(attacker);
+            animator.Play(hitAnimationName, 0, 0f);
+            GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.hit);
             
         }
 

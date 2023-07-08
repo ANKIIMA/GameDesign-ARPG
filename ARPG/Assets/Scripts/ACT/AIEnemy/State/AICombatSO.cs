@@ -56,18 +56,34 @@ public class AICombatSO : StateActionSO
                 animator.SetFloat(verticalID, -1f, 0.25f, Time.deltaTime);
                 animator.SetFloat(horizontalID, 0f, 0.25f, Time.deltaTime);
 
-                RandomValue = GetRandomHorizontal();
+                RandomValue = GetRandomValue();
 
                 if(m_aiCombat.GetCurrentTargetDistance() < 1.7f)
                 {
-                    animator.Play("Slide_B", 0, 0f);
-                    m_aiMovement.MoveInterface(-m_aiMovement.transform.forward, animator.GetFloat(animationMoveID) * 10, true);
+                    RandomValue = GetRandomValue();
+                    //animator.Play("Slide_B", 0, 0f);
+                    //m_aiMovement.MoveInterface(m_aiMovement.transform.forward, animator.GetFloat(animationMoveID) * 10, true);
+                    switch (RandomValue)
+                    {
+                        case -1:
+                            animator.Play("Atk1", 0, 0);
+                            break;
+                        case 0:
+                            animator.Play("Atk2", 0, 0);
+                            break;
+
+                        case 1:
+                            animator.Play("Atk3", 0, 0);
+                            break;
+                    }
+                    m_aiMovement.MoveInterface(m_aiMovement.transform.forward, animator.GetFloat(animationMoveID) * 10, true);
                 }
             }
             
             //¾àÀëÊÊµ±£¬Ëæ»úÒÆ¶¯,Ëæ»ú¹¥»÷»òÏòºó·­¹ö
             else if(m_aiCombat.GetCurrentTargetDistance() >3f && m_aiCombat.GetCurrentTargetDistance() < 7f)
             {
+                //×óÓÒÒÆ¶¯
                 if(RandomValue == 1 || RandomValue == -1)
                 {
                     m_aiMovement.MoveInterface(m_aiMovement.transform.right * RandomValue, 1.5f, true);
@@ -93,7 +109,7 @@ public class AICombatSO : StateActionSO
         }
     }
 
-    private int GetRandomHorizontal() => Random.Range(-1, 2);
+    private int GetRandomValue() => Random.Range(-1, 2);
 
     #endregion
 }
