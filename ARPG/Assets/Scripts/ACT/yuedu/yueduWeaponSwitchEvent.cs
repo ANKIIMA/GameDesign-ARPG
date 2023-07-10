@@ -10,14 +10,39 @@ public class yueduWeaponSwitchEvent : MonoBehaviour
     [SerializeField] Transform backSword;
     [SerializeField] Transform backGreatSword;
 
+    [SerializeField] private bool hasGreatSword;
+
+    public bool HasGreatSword { get => hasGreatSword; set => hasGreatSword = value; }
+
+    private void Start()
+    {
+        hasGreatSword = false;
+        InitWeaponState();
+    }
+
+    private void InitWeaponState()
+    {
+        handSword.gameObject.SetActive(true);
+        handGreatSword.gameObject.SetActive(false);
+
+        backSword.gameObject.SetActive(false);
+        backGreatSword.gameObject.SetActive(false);
+    }
+
+
     /// <summary>
-    /// 
+    /// 切换武器
     /// </summary>
     /// <param name="state">
     /// state==0 启用大剑禁用小剑
     /// state==1 启用小剑禁用大剑</param>
     private void OnWeaponSwitched(int state)
     {
+        if(hasGreatSword == false)
+        {
+            return;
+        }
+
         if(state == 0)
         {
             handSword.gameObject.SetActive(false);
@@ -35,6 +60,13 @@ public class yueduWeaponSwitchEvent : MonoBehaviour
             backSword.gameObject.SetActive(false);
             backGreatSword.gameObject.SetActive(true);
         }
+    }
+
+    public void EquipGreatSword()
+    {
+        hasGreatSword = true;
+        backGreatSword.gameObject.SetActive(true);
+
     }
 
 }

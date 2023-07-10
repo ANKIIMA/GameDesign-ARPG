@@ -1,0 +1,1781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="@InputController" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAgAACABIBgAAAAECFABAgAAAGCEAEAgQEBQAgA=</HashCode>
+      <FileName>Assets\Assets\Input System\InputController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ToCombatConditionSO" Collapsed="true">
+    <Position X="8.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAACAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\AIEnemy\Condtion\ToCombatConditionSO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AICombat" Collapsed="true">
+    <Position X="5.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQEAAAAAEAAAABCQAAAEAAEABAEABAAAAAAIAAEQQA=</HashCode>
+      <FileName>Assets\Scripts\ACT\AIEnemy\Enemy\AICombat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AIHealthSystem" Collapsed="true">
+    <Position X="0.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAEAACAAAAAAIAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\AIEnemy\Enemy\AIHealthSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AIMovement" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\AIEnemy\Enemy\AIMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AICombatSO" Collapsed="true">
+    <Position X="0.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BACABAAAAAAoAAAIAAAAAAACACACAAAAAIABAhEAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\AIEnemy\State\AICombatSO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AIIdleSO" Collapsed="true">
+    <Position X="2.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\AIEnemy\State\AIIdleSO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameAssets" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAABEA=</HashCode>
+      <FileName>Assets\Scripts\ACT\assets management\GameAssets.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameSoundAssetsSO" Collapsed="true">
+    <Position X="18" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAACAAACAAAAAAAgAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\assets management\GameSoundAssetsSO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraController" Collapsed="true">
+    <Position X="23.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQUgAAgISAUAIACAkAAMCAABIgAEEAAIAAAQCAEIEg=</HashCode>
+      <FileName>Assets\Scripts\ACT\Camera\CameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MLLInteractionController" Collapsed="true">
+    <Position X="5.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\NPC\MLLInteractionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerInputController" Collapsed="true">
+    <Position X="30.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAQAEAAEABCIAACI2IAAAFCAKAAAAAgIACEI=</HashCode>
+      <FileName>Assets\Scripts\ACT\PlayerInputController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerInputModel" Collapsed="true">
+    <Position X="32" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAQAEAAEABCIAACImIAAABCAKAAAAAgIACEI=</HashCode>
+      <FileName>Assets\Scripts\ACT\PlayerInputModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogueController" Collapsed="true">
+    <Position X="23.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAAQAgAgAAAIAAIEggAAAIAABAQAAAAEAIAAABCEA=</HashCode>
+      <FileName>Assets\Scripts\ACT\UI\DialogueController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventoryController" Collapsed="true">
+    <Position X="25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAIAAAAAAAAAAAAAAABAAgACAgAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\ACT\UI\InventoryController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventorySO" Collapsed="true">
+    <Position X="26.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\UI\InventorySO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemSO" Collapsed="true">
+    <Position X="28.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAECAAABAgAAAAAAAAAAAAAAAAAAABAAAAAQEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\UI\ItemSO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemUIPrefab" Collapsed="true">
+    <Position X="30.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAQAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\UI\ItemUIPrefab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemWorldController" Collapsed="true">
+    <Position X="32" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAACQAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\UI\ItemWorldController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LookAtCamera" Collapsed="true">
+    <Position X="21.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\UI\LookAtCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NewBehaviourScript" Collapsed="true">
+    <Position X="25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\UI\NewBehaviourScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIManagement" Collapsed="true">
+    <Position X="32" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAEEGCAAAAAAAAAgAAAAAEABhwAAAEQABhIhAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\UI\UIManagement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimationResetTrigger" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\Ulit\AnimationResetTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjectPoolSystem" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAEACQAAAAAAAAAAAAAQAAABAAAAAgAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\ACT\Ulit\GameObjectPool\BaseClass\GameObjectPoolSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PoolItemBase" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAAACAAAAAgAAAEAAAAAAAAAAAEAAAAAAAAUA=</HashCode>
+      <FileName>Assets\Scripts\ACT\Ulit\GameObjectPool\PoolItemBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Timer" Collapsed="true">
+    <Position X="12.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAAACAAAAAAAAAAAAAAAEAAAAAAAAAAIEAAEA=</HashCode>
+      <FileName>Assets\Scripts\ACT\Ulit\Timer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitExpandingFunction" Collapsed="true">
+    <Position X="23.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAQAQAAAACAAAAAAAAAAAgAAQAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\Ulit\UnitExpandingFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConditionSO" Collapsed="true">
+    <Position X="8.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAMAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\Ulit\X\BaseSO\ConditionSO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateActionSO" Collapsed="true">
+    <Position X="1.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAQAAAAAIAAgAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\Ulit\X\BaseSO\StateActionSO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransitionSO" Collapsed="true">
+    <Position X="23.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAABAAAEAABAAAIAAAACABgAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\Ulit\X\BaseSO\TransitionSO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateMachineSystem" Collapsed="true">
+    <Position X="30.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAIAAAAAAAAAAAAAAAQAAAAAAAAEg=</HashCode>
+      <FileName>Assets\Scripts\ACT\Ulit\X\StatMachineSystem\StateMachineSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NB_Transition" Collapsed="true">
+    <Position X="23.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAIAAAEEAACAAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\Ulit\X\新版转换容器\NB_Transition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="yuduCombatController" Collapsed="true">
+    <Position X="7.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEQEAACAAAAAAEAAAAAAIAMAABQQAAAAgAAAAABIAEA=</HashCode>
+      <FileName>Assets\Scripts\ACT\yuedu\yuduCombatController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="yueduHealthController" Collapsed="true">
+    <Position X="2.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAIAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\yuedu\yueduHealthController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="yueduInteractionController" Collapsed="true">
+    <Position X="30.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAQCAABAAAAAAABAAACAAAAAAEAAACAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\yuedu\yueduInteractionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="yueduMovementController" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQMACAAACACCAAAkAwAIBgIRAICSAAAIABQEBBBA8g=</HashCode>
+      <FileName>Assets\Scripts\ACT\yuedu\yueduMovementController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="yueduWeaponSwitchEvent" Collapsed="true">
+    <Position X="32" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACICIgAAEAAAAAAAAAIAAAAAAQAAAAQAACA=</HashCode>
+      <FileName>Assets\Scripts\ACT\yuedu\yueduWeaponSwitchEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyController" Collapsed="true">
+    <Position X="26.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAICAAAAAAAAAAAAAAAAAAAAAAAAAIAAAIAEA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyModel" Collapsed="true">
+    <Position X="28.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAgAAlAAAAIQAAAABAAAAAAAAAAAAQAIAAE=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyView" Collapsed="true">
+    <Position X="30.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAQAAAAAAABAAAAAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerController" Collapsed="true">
+    <Position X="28.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BGYCAABAICIAAClAoAIAAAAAAIAAKACAAAAIQAIIAEI=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="playerModel" Collapsed="true">
+    <Position X="33.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JAgFQSoBAGgIDYAAJBUBgGgCFCIJipBDBMAAWEAIABE=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerView" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACEAAAAAAAAAAAAAAAAACAAAAAAAAAAYAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeaponController" Collapsed="true">
+    <Position X="26.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\WeaponController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BitMaskAttribute" Collapsed="true">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Attributes\BitMaskAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResourcePathAttribute" Collapsed="true">
+    <Position X="21.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Attributes\ResourcePathAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Demo_FixScrollRects" Collapsed="true">
+    <Position X="32" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Demo_FixScrollRects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CommonColorBuffer" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAACAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Miscellaneous\CommonColorBuffer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CloudsVolume" Collapsed="true">
+    <Position X="26.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAEARAAAAAgAACAAEAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Assets\Terrain\PureNature\Scripts\CloudsVolume.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnvironmentManager" Collapsed="true">
+    <Position X="32" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQCAAAAAAAAAAAAAAAAQAEIMAAAAAAIAAAAAABAAAE=</HashCode>
+      <FileName>Assets\Terrain\PureNature\Scripts\EnvironmentManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FreeCamera" Collapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAIAEAAAAQAAAAAAABAgEAAIAABAAAAAAAA=</HashCode>
+      <FileName>Assets\Terrain\PureNature\Scripts\FreeCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WaterReflection" Collapsed="true">
+    <Position X="25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Assets\Terrain\PureNature\Scripts\WaterReflection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SetPropertyAttribute" Collapsed="true">
+    <Position X="23.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\ThirdParty\SetProperty-master\Scripts\SetPropertyAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SetPropertyExample" Collapsed="true">
+    <Position X="25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAICAAACAAAAAA=</HashCode>
+      <FileName>Assets\ThirdParty\SetProperty-master\Scripts\SetPropertyExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ACT.Combat.BasicCombatModel" Collapsed="true">
+    <Position X="6.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgIABAQAAAAIAAAAAAAAAAACACACEAYAAAABAAAAQUA=</HashCode>
+      <FileName>Assets\Scripts\ACT\BaseClass\BasicCombatModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ACT.Health.BasicHealthModel" Collapsed="true">
+    <Position X="1.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQBAAAAAAAAUAAAEAAYEAACEAAIAQYIAEAAAQEABFA=</HashCode>
+      <FileName>Assets\Scripts\ACT\BaseClass\BasicHealthModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ACT.Interaction.BasicInteractionModel" Collapsed="true">
+    <Position X="5.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQgAAIAACAABAAAACAAAAICAAAEAAAAAQAABAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\BaseClass\BasicInteractionModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ACT.Move.BasicMovementModel" Collapsed="true">
+    <Position X="6.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEQABAgAACIIBAAICAAAEIAiAFAQAAAIEAACAwIABNA=</HashCode>
+      <FileName>Assets\Scripts\ACT\BaseClass\BasicMovementModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ACT.UI.BasicUIRefModel" Collapsed="true">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\BaseClass\BasicUIRefModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyUnitTools.SingletonBase&lt;T&gt;" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\Ulit\SingletonBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.AnimatedButton" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAAAAAAAhAAQABAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\AnimatedButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.BlurManager" Collapsed="true">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAIIKAAAABAIAgAAAAAAIAACAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\BlurManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.CheckButton" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAQAABIAQAAAAgAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\CheckButton.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Michsky.UI.Frost.DropdownSubMenu" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiAACAAAAAQAAAAAAAAgQAAAAAAAACAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\DropdownSubMenu.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Michsky.UI.Frost.ExitToSystem" Collapsed="true">
+    <Position X="33.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\ExitToSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.FeedbackSystem" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\FeedbackSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.FriendsPanelAnim" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAEAAAQBAAAAAAAgAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\FriendsPanelAnim.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Michsky.UI.Frost.HoldKeyEvent" Collapsed="true">
+    <Position X="21.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACBAgAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\HoldKeyEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.LaunchURL" Collapsed="true">
+    <Position X="33.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\LaunchURL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.LayoutGroupPositionFix" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAACCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\LayoutGroupPositionFix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.ListContentSizeFix" Collapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAABAAAAAAAAAABAAEA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\ListContentSizeFix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.LoadingScreen" Collapsed="true">
+    <Position X="16.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAgCYQCACAAgAAAABCQBAAABACAAAAqKEEgAQBMA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\LoadingScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.LoadingStyle" Collapsed="true">
+    <Position X="18" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\LoadingStyle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.LoadScene" Collapsed="true">
+    <Position X="19.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\LoadScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.PressKey" Collapsed="true">
+    <Position X="14.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQACAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\PressKey.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.ReorderableList" Collapsed="true">
+    <Position X="16.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAQAgIAAAABAAAAgAAAAAAAAAAAgFAAAAACQFI=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\ReorderableList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.ReorderableListContent" Collapsed="true">
+    <Position X="18" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAQAAAAAAAAQAAAQAAAAAAgAiAAIACAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\ReorderableListContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.ReorderableListElement" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAIAgAwCSgAAABAECAAAAAABCAQAEADABAQAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\ReorderableListElement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Michsky.UI.Frost.SliderManager" Collapsed="true">
+    <Position X="26.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAIAEAACAAAAgAEAAAACAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\SliderManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.SplashScreenManager" Collapsed="true">
+    <Position X="28.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAACABgAAAAAABIAAAAAAAAAAAACCAAAAAAIA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\SplashScreenManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.SwitchManager" Collapsed="true">
+    <Position X="32" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgEAAACAAQAAAAAABAAAAAAAEAAAgAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\SwitchManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.TimedAction" Collapsed="true">
+    <Position X="33.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CASQAAAAACAAAAAAAAAAAAAAAAAAAAAAAACAAAIAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\TimedAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.TimedProgressBar" Collapsed="true">
+    <Position X="11" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAAAAAAEAAAAABAAAAAABAAQAQAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\TimedProgressBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.ToggleAnim" Collapsed="true">
+    <Position X="14.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAKAABCACAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\ToggleAnim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.TooltipContent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAQAEAQCAAAAACIAAAAAAAAAAgAAAAAAAAAQQAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\TooltipContent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Michsky.UI.Frost.TooltipManager" Collapsed="true">
+    <Position X="18" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAIAgACIAAIFAQAAiBAAQAAAABAAIAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\TooltipManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.TopPanelButton" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAQAAAAAAAAAAgAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\TopPanelButton.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Michsky.UI.Frost.TopPanelManager" Collapsed="true">
+    <Position X="21.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAAAAAAAAWBIAAAgICAAAAAAAAIAAIAAAAAECYgAAIA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\TopPanelManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.Frost.UIElementSound" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASQAAAAiAAwAAAAAAAgAEAAAAIQAAQAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\UIElementSound.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Michsky.UI.Frost.WeaponSelectionAnim" Collapsed="true">
+    <Position X="28.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAgCACAQAIAAACAAAgAAAAIAAIAAAAAAAAEAAIA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\WeaponSelectionAnim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.ModernUIPack.CustomInputField" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAABAAKAAAAgAAAAAAAQAAAAAAAAQAAAQAEAAQAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\CustomInputField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Michsky.UI.ModernUIPack.HorizontalSelector" Collapsed="true">
+    <Position X="23.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACAAIBAIAAABQAAAAAAAAAAAAAABAAABAAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\HorizontalSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.UI.Michsky.UI.Frost.UIGradient" Collapsed="true">
+    <Position X="33.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAgAAAACAAAICAAAAAgAAAAAAACEBAAAAAAgAA=</HashCode>
+      <FileName>Assets\Sprites\Frost UI\Scripts\UIGradient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.ColorScheme" Collapsed="true">
+    <Position X="28.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAQAEAIBQAgEIAIAgAAGAKAAAGAIABMIBAIkABAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Color Scheme\ColorScheme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.ColorSchemeElement" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAEAAAAAAAAAEAAAAAAAAEAAAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Color Scheme\ColorSchemeElement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.ColorSchemeElement_SelectField" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAEAAAAAAAAAEAAAAAAAAUAAAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Color Scheme\ColorSchemeElement_SelectField.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.ColorSchemeManager" Collapsed="true">
+    <Position X="33.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Color Scheme\ColorSchemeManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_CharacterCreateMgr" Collapsed="true">
+    <Position X="19.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACBAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Character Create\Demo_CharacterCreateMgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_CharacterSelectMgr" Collapsed="true">
+    <Position X="26.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAbBAAMAACAAAKBoQACIAAABLALCCAAAAAQQAACABEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Character Select\3D\Demo_CharacterSelectMgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_CharacterSelectSlot" Collapsed="true">
+    <Position X="28.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEIAAAIAAgIAAAAAAAAQAAAAAcAAAAAABBUA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Character Select\3D\Demo_CharacterSelectSlot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_CharacterInfo" Collapsed="true">
+    <Position X="21.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Character Select\Demo_CharacterInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_CharacterSelectList" Collapsed="true">
+    <Position X="23.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACBAAAAACAAAABAVABIAAABIAAAAAAAAAQAIAAAAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Character Select\List\Demo_CharacterSelectList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_CharacterSelectList_Character" Collapsed="true">
+    <Position X="25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAIAAQAAAgDCAkAiAAAAAQMBEACgAIAYQAAAAACEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Character Select\List\Demo_CharacterSelectList_Character.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_AddChatMessage" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAIAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Chat\Demo_AddChatMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_AddChatTestMessages" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAIAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Chat\Demo_AddChatTestMessages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_Chat" Collapsed="true">
+    <Position X="30.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAAAABACAQAACIABAgCRAgAIADFBAgEoMAEACAAACEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Chat\Demo_Chat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_CastManager" Collapsed="true">
+    <Position X="18" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAIAAAAAAAAAAAAAAQAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Demo_CastManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_LookAtCamera" Collapsed="true">
+    <Position X="33.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Demo_LookAtCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_PlayerInventory" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiAEBAAAAAAAAAAAAAAAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Demo_PlayerInventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_QualitySlider" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Demo_QualitySlider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_QuestTrackerCollapse" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAIAAQAAwAAAAAAAAAAAAAIAAAAAAYAAAAAAAICAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Demo_QuestTrackerCollapse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_Quit" Collapsed="true">
+    <Position X="16.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAIAAAAAAAAAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Demo_Quit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_ResolutionSelect" Collapsed="true">
+    <Position X="18" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAABCAAAAAAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Demo_ResolutionSelect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_Spellbook_SpellRow" Collapsed="true">
+    <Position X="19.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAACAAAAAgAAAAAAAAIAAAAAAAAAQIAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Demo_Spellbook_SpellRow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Demo_XPTooltip" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAQgAAAAACAAAAAAEAAAAAAgJBAIAAIEAYAACGA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Demo\Demo_XPTooltip.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.Test_CastBar" Collapsed="true">
+    <Position X="33.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAIAAAAAAAAAAAAAAAAAAAAECAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Test Scripts\Test_CastBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Test_CompassTester" Collapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAACAAAAAAgACAAIAAAgCAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Test Scripts\Test_CompassTester.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Test_FadeInOut" Collapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEQAAAAAAAAAAAAAAACAAAAAAAAAQAIAAAgCAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Test Scripts\Test_FadeInOut.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Test_Fill" Collapsed="true">
+    <Position X="14.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAQACAAAAAAAACAAAAiAgCAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Test Scripts\Test_Fill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Test_SelectAddOption" Collapsed="true">
+    <Position X="16.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAABAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Test Scripts\Test_SelectAddOption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Test_UIBulletBar" Collapsed="true">
+    <Position X="18" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAACAAAAAACAgAAAAAAAQACAQAAAAAACAAAACAgCAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Test Scripts\Test_UIBulletBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Test_UIEquipSlot_Assign" Collapsed="true">
+    <Position X="19.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAEABAAAACAAAAAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Test Scripts\Test_UIEquipSlot_Assign.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Test_UIItemSlot_Assign" Collapsed="true">
+    <Position X="21.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAEABAAAACAAAAAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Test Scripts\Test_UIItemSlot_Assign.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Test_UIItemSlot_AssignAll" Collapsed="true">
+    <Position X="23.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAEAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Test Scripts\Test_UIItemSlot_AssignAll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Test_UIProgressBar" Collapsed="true">
+    <Position X="25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAACAAAAAACAgAAAAAAAQECAQAAAAAACAAAACAgCAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Test Scripts\Test_UIProgressBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Test_UISlotBase_Assign" Collapsed="true">
+    <Position X="26.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAABAAAgAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Test Scripts\Test_UISlotBase_Assign.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Test_UISpellSlot_Assign" Collapsed="true">
+    <Position X="28.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAEAgAAAACAAAAAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Test Scripts\Test_UISpellSlot_Assign.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Test_UISpellSlot_AssignAll" Collapsed="true">
+    <Position X="30.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAEAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Test Scripts\Test_UISpellSlot_AssignAll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Test_UITalentSlot_Assign" Collapsed="true">
+    <Position X="32" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAAAAAAAAAAAAAAAAAEAQAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Test Scripts\Test_UITalentSlot_Assign.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIAudioSource" Collapsed="true">
+    <Position X="30.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAgAAAAAAAAAAAAAAAAAISAAAAAACAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Audio\UIAudioSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIPlayAudio" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAgAAAIAgAAAAAAAgABAAAggAAQAAAAAQACIAg=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Audio\UIPlayAudio.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIBulletBar" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAEEAgAACAEAABAQAGAoQAIEAAuAAAAAEGIAAAEAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Bars\UIBulletBar.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UICastBar" Collapsed="true">
+    <Position X="16.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEQoBAhIACAAAAFBkAMAC6ABQFQWAEAACQAEADAiAHA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Bars\UICastBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIProgressBar" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCABIAAgaSAABAAIAAEABAAgEAANABAAAAABECCAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Bars\UIProgressBar.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIStepBar" Collapsed="true">
+    <Position X="32" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBCgAQAEoCAAICBMEAEAQgBAAAAwQABAAAIEILAgAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Bars\UIStepBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UISelectField" Collapsed="true">
+    <Position X="11" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8GahAQMMEuYkIAloSUs4EsnNQ5MWA+iZGEiUzlOxHEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Controls\Select Field\UISelectField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UISelectField_List" Collapsed="true">
+    <Position X="12.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAICABAAAIAAAAgAAAAAAAAAAAAAAAAAAASQw=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Controls\Select Field\UISelectField_List.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UISelectField_Option" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAgAAAAiAFAQAAAAEAgAEAAIAAAAAAAAAAAAEQhAg=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Controls\Select Field\UISelectField_Option.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UISelectField_OptionOverlay" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAKAAAAIAAAIAAAAACAAgAIAAABgAAAIQBAIAQCQLAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Controls\Select Field\UISelectField_OptionOverlay.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UISelectField_Transition" Collapsed="true">
+    <Position X="18" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAIAAAAIAAAEAAAAAAAAAAAAARBAAgCJxEAAAYGQCEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Controls\Select Field\UISelectField_Transition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIJoystick" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAmABIABQBQIAAAAgIFAMEAAAIAAICIAAABIAAAACAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Controls\UIJoystick.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UISliderExtended" Collapsed="true">
+    <Position X="21.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CFMAjAQIAACBABQoAAGgAsiACQIAAIFYABBEQBAYCgA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Controls\UISliderExtended.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UISwitchSelect" Collapsed="true">
+    <Position X="33.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YGABAAIACKAAIggAQAgAAAABAAAAAKAYAAgACAAACAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Controls\UISwitchSelect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UITab" Collapsed="true">
+    <Position X="11" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAgIAAAAAEAFRQABEAgEQAABQEACQIEgAFCQEQDEI=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Controls\UITab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIToggle_OnOff" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAIAAAAAAAAAAAIAQEIAAAQAACACAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Controls\UIToggle_OnOff.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIItemInfo" Collapsed="true">
+    <Position X="19.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAACAAAAggARAAAAwAAQAAABAAAIAEQAAABEQAgA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Databases\Serializables\UIItemInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIItemQualityColor" Collapsed="true">
+    <Position X="21.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAQAAAAAAAAAQAAAAAAAQAAIAAACAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Databases\Serializables\UIItemQuality.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UISpellInfo" Collapsed="true">
+    <Position X="26.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAgiAAAAAAAAAQAAAAAAQAgAAAAAAEAQAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Databases\Serializables\UISpellInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UISpellInfo_FlagsExtensions" Collapsed="true">
+    <Position X="28.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAACAAAAAAAABAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Databases\Serializables\UISpellInfo_Flags.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UITalentInfo" Collapsed="true">
+    <Position X="14.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Databases\Serializables\UITalentInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIItemDatabase" Collapsed="true">
+    <Position X="18" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAgAAAAAAAAAAAAIQAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Databases\UIItemDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UISpellDatabase" Collapsed="true">
+    <Position X="25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAIQACAgAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Databases\UISpellDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UITalentDatabase" Collapsed="true">
+    <Position X="12.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAABAAAAAAAAAAAAAAAAIQAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Databases\UITalentDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Gradient" Collapsed="true">
+    <Position X="19.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAQAAAgAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Effects\Gradient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.LetterSpacing" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASAAAAAAAgCAAAACEBAAAAAAAAIBAIAAABBAgABEg=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Effects\LetterSpacing.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.NicerOutline" Collapsed="true">
+    <Position X="26.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAACQBAAgAAAAAEAAAAACAAAAAAAAAAAAAAAAAw=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Effects\NicerOutline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIEquipReceiver" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAACAEAQCAAAEAAAAAARAgAAAAAAQQAYAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\UIEquipReceiver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIEquipSlot" Collapsed="true">
+    <Position X="5.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQARAAAAAIBIBAAAAABACCgABABgAEAIkAAAAAAQ=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\UIEquipSlot.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DuloGames.UI.UIItemSlot" Collapsed="true">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEARAhoBgoCABAAAAAAAACwABABgAEAAkAQAAGAQ=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\UIItemSlot.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DuloGames.UI.UIItemSlot_SetColorFromQuality" Collapsed="true">
+    <Position X="23.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAABAAAAAAAAQAIAAAIAAAACEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\UIItemSlot_SetColorFromQuality.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UISlotBase" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQ6AS2VhAiAMKELMnAFAmCQASUwoCDg4ACQ0QVCVeAw=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\UISlotBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DuloGames.UI.UISlotCooldown" Collapsed="true">
+    <Position X="23.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgQAAAigAEIAACEkIgAUgAAFAAAAIAEAIAAAACMQ=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\UISlotCooldown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UISpellSlot" Collapsed="true">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="DuloGames.UI.UISpellSlot.OnAssignEvent" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\UISpellSlot.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="DuloGames.UI.UISpellSlot.OnUnassignEvent" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\UISpellSlot.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="DuloGames.UI.UISpellSlot.OnClickEvent" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\UISpellSlot.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAACEERIgoAgoCABAAAAAAAACQABAhoAAAAEAUAAGAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\UISpellSlot.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DuloGames.UI.UITalentSlot" Collapsed="true">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABARIhiAQIAACAAAIAAAAEgAAAAIAAACEAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\UITalentSlot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.FlexibleWidthGridLayout" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Layout\FlexibleWidthGridLayout.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UILoadingOverlay" Collapsed="true">
+    <Position X="26.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAhAAAAAAAAAAIAAAAACAACAAAAAAIIAQAAAFAgCOA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Loading Overlay\UILoadingOverlay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UILoadingOverlayManager" Collapsed="true">
+    <Position X="28.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAIAAAAAAEAIQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Loading Overlay\UILoadingOverlayManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UILoadScene" Collapsed="true">
+    <Position X="30.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAIAAAAAAAAAIACAAAAAAAAAEIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Loading Overlay\UILoadScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIDrawVertices" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAAAAAAAAAAEAAAAAAAABAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Mesh Modifiers\UIDrawVertices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIFlippable" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACAEAAAAAAAAAAAAEAAAAAAAACAAAAAAAAAgAAAAg=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Mesh Modifiers\UIFlippable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UICanvasAnchorToCamera" Collapsed="true">
+    <Position X="12.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAACAIAAAAAAAAAAAAAAAAAAAAAAAgAAAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Miscellaneous\UICanvasAnchorToCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UICanvasAspectResize" Collapsed="true">
+    <Position X="14.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Miscellaneous\UICanvasAspectResize.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIGlobeFillInverter" Collapsed="true">
+    <Position X="32" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Miscellaneous\UIGlobeFillInverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIInputCaretOffset" Collapsed="true">
+    <Position X="14.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAIAAAAIAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Miscellaneous\UIInputCaretOffset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIProgressBarDisplayValue" Collapsed="true">
+    <Position X="23.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAIAAAQAgAAAEAAAAAAAAAAAAAIAAAAAAAACEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Miscellaneous\UIProgressBarDisplayValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIScrollRectExpander" Collapsed="true">
+    <Position X="33.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgAAAAAAAAAAAAAACAAAAAAAAAQAIAAAAAAEACAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Miscellaneous\UIScrollRectExpander.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UISliderDisplayValue" Collapsed="true">
+    <Position X="19.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAQAgAAAEAAAAAAAAQAAAAIAAAAAAAACEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Miscellaneous\UISliderDisplayValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIStatsAdd" Collapsed="true">
+    <Position X="30.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Miscellaneous\UIStatsAdd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UITextSetValue" Collapsed="true">
+    <Position X="16.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAIAAAAAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Miscellaneous\UITextSetValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIToggleWindowAndTab" Collapsed="true">
+    <Position X="21.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAABAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Miscellaneous\UIToggleWindowAndTab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UITooltipFlipBackground" Collapsed="true">
+    <Position X="25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAgAAgAAAACAAIAAAAAAAACEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Miscellaneous\UITooltipFlipBackground.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UITooltipFlipEffect" Collapsed="true">
+    <Position X="26.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAgBAgACAACAgIAAAAAAAACEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Miscellaneous\UITooltipFlipEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UITooltipFlipTransform" Collapsed="true">
+    <Position X="28.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAgBAgACAAAAgIAAAAAAAACEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Miscellaneous\UITooltipFlipTransform.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIWorldCanvasScaleByCamera" Collapsed="true">
+    <Position X="21.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Miscellaneous\UIWorldCanvasScaleByCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIModalBox" Collapsed="true">
+    <Position X="11" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQABBQAEAAwAgAAFAAAAFECAAIEAAAAAAAAAUCAIMA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Modal Box\UIModalBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIModalBoxCreate" Collapsed="true">
+    <Position X="12.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAgCAAAAAgAAAIAAIAIEACAAAAAAAIAAAAAAAACIA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Modal Box\UIModalBoxCreate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIModalBoxManager" Collapsed="true">
+    <Position X="14.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAgAEAAAAAAIAAAABAEAIQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Modal Box\UIModalBoxManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UICircularRaycastFilter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiABAEACAAYAAAAAAAAAAAAAAAAIAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Raycast Filters\UICircularRaycastFilter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIIgnoreRaycast" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Raycast Filters\UIIgnoreRaycast.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIMaskRaycastFilter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="33.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAQAAAAAAEAAAAgAAAAABAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Raycast Filters\UIMaskRaycastFilter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIRectangularRaycastFilter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACADAAAABAQAAAAAAEAAAACAAAAIAAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Raycast Filters\UIRectangularRaycastFilter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIScene" Collapsed="true">
+    <Position X="26.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FEwmIAAAUKBAABBAAAEAgAAAAAABIlRYYwEBAFGgGkI=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Scene System\UIScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UISceneManager" Collapsed="true">
+    <Position X="28.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAIAAAAAAAAAAABCAIAAQABAAAAICABAAAAgAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Scene System\UISceneManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UISceneOpen" Collapsed="true">
+    <Position X="30.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAAAAAIAAAAAIAAAAAAAAAAAEIAAAAAAAgCAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Scene System\UISceneOpen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UISceneRegistry" Collapsed="true">
+    <Position X="32" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAIAAAAAAAABCAIAAQABAACAICABAAAAgAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Scene System\UISceneRegistry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.AnimationTriggersExtended" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAIAACAAAQAAgAAgEAAAAAAAiAAgAAAAAIABAQAE=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Serializables\AnimationTriggersExtended.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UITooltip" Collapsed="true">
+    <Position X="23.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GE2DCAkjAqBIAAxhEJAAGRBuDQBFIVXAa0URIFCzAFQ=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tooltips\UITooltip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UITooltipLineContent" Collapsed="true">
+    <Position X="30.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAABAAAACAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tooltips\UITooltipLineContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UITooltipLines" Collapsed="true">
+    <Position X="32" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAACAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tooltips\UITooltipLines.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UITooltipTextEffect" Collapsed="true">
+    <Position X="14.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAQAAggAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tooltips\UITooltipLineStyle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UITooltipLineStyle" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="33.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEEAAQQAAAAAQAAAQAAARAAAAAgAAAAABACAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tooltips\UITooltipLineStyle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UITooltipManager" Collapsed="true">
+    <Position X="11" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAICAAAAAAAAAAQiMAAICAIBQAJAIQAABQAABAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tooltips\UITooltipManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UITooltipShow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACACAQgACAIAAAAAAAAEAAAAAAgIBAAQAgEASAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tooltips\UITooltipShow.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIEffectTransition" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABCAiQBYAAAIAACAACEAoEAABAEoAjIIABIgAQCALFA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Transitions\UIEffectTransition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIHighlightTransition" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BJKAiYBYMAAMAgCIACMEoAAAABFoJjoIQRIARQO5LFA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Transitions\UIHighlightTransition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIPressTransition" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAKAgIBYAAAMAACAACMAIAAAABFgAigIQAAAAQGQDFA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Transitions\UIPressTransition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIToggleActiveTransition" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIIAiIAYEAAEAgAIACEAIAAAABBoBhgIQQAABAOwDEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Transitions\UIToggleActiveTransition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIAlwaysOnTop" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAwAAAAAAAAIAEAAAQAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\UIAlwaysOnTop.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIDragObject" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQgCQGAAAAAKAFARMAhgMAAMKAACASQAABAgAkgIAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\UIDragObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIInputEvent" Collapsed="true">
+    <Position X="16.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAIBAAAAAAAAAAAAAAAAAAAAAAIAQAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\UIInputEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIPagination" Collapsed="true">
+    <Position X="16.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAACCAAAAAAAAAAAACiAAgIAAAAAAAAABAAAAI=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\UIPagination.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIUtility" Collapsed="true">
+    <Position X="16.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\UIUtility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIBlackOverlay" Collapsed="true">
+    <Position X="32" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAEAACAAEAAAEAEAAAACAAgEAAAAAQAAAAAgCEE=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Window\UIBlackOverlay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIBlackOverlayManager" Collapsed="true">
+    <Position X="33.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAEAIQAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Window\UIBlackOverlayManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UICloseAndShowWindow" Collapsed="true">
+    <Position X="19.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAEAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Window\UICloseAndShowWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.UIWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JGAkAEAAASEJkwCCEAkAAAACECAFElAIRwIAoFCgKEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Window\UIWindow.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DuloGames.UI.UIWindowManager" Collapsed="true">
+    <Position X="19.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AowBAAAgAAAAAAAAAAAAAAAAAAAAAAAIQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Window\UIWindowManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Tweens.TweenEasingHandler" Collapsed="true">
+    <Position X="25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tweening\TweenEasingHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DuloGames.UI.Tweens.TweenRunner&lt;T&gt;" Collapsed="true">
+    <Position X="26.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAgAEAAAAAgACAACAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tweening\TweenRunner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="DuloGames.UI.ColorBlockExtended" Collapsed="true">
+    <Position X="11" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAIAEAYAAAAAAIQgAAgEoAABAAAbAAEAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Serializables\ColorBlockExtended.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuloGames.UI.SpriteStateExtended" Collapsed="true">
+    <Position X="16.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAEAAAiAAIAIYACAAAAAAACAAAAAAABAABAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Serializables\SpriteStateExtended.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuloGames.UI.Tweens.ColorTween" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgBYwAAAAAQAAAIQIIAAAAAQAAYAAIAAIAEEgAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tweening\ColorTween.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="DuloGames.UI.Tweens.FloatTween" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABYwAAAAAAQAAOQAIAAgAAAAAYAAIAAIAAEgAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tweening\FloatTween.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="DuloGames.UI.Tweens.Vector2Tween" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABABYwAAAAAAAAAIQAIAAAAAAAAYAAIAAIIIFgAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tweening\Vector2Tween.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="DuloGames.UI.Tweens.Vector3Tween" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABYwAAAAAAAAAIQAIAAIAAAAAYAAIAAIQIFgAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tweening\Vector3Tween.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Interface Name="IPool" Collapsed="true">
+    <Position X="12.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\ACT\Interface\IPool.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TakeDamagerInterface" Collapsed="true">
+    <Position X="23.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\Interface\TakeDamagerInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DuloGames.UI.IColorSchemeElement" Collapsed="true">
+    <Position X="11" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Color Scheme\IColorSchemeElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DuloGames.UI.IUIProgressBar" Collapsed="true">
+    <Position X="18" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Bars\IUIProgressBar.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DuloGames.UI.IUIItemSlot" Collapsed="true">
+    <Position X="16.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\Interfaces\IUIItemSlot.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DuloGames.UI.IUISlotHasCooldown" Collapsed="true">
+    <Position X="19.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\Interfaces\IUISlotHasCooldown.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DuloGames.UI.IUISpellSlot" Collapsed="true">
+    <Position X="21.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAARIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\Interfaces\IUISpellSlot.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DuloGames.UI.Tweens.ITweenValue" Collapsed="true">
+    <Position X="14.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABIAAAAAAAAAAIQAAAAAAAAAAAAAIAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tweening\ITweenValue.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SoundAssetsType" Collapsed="true">
+    <Position X="14.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAgAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ACT\assets management\GameSoundAssetsSO.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DuloGames.UI.ColorSchemeShade" Collapsed="true">
+    <Position X="11" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAgAAQAAQAEAAgAAgAAQAABABAAAAACQACA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\Color Scheme\ColorSchemeShade.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DuloGames.UI.UIEquipmentType" Collapsed="true">
+    <Position X="18" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAAAAAAgAAQIAAABABAAAgAQAAgAAAAoAAAAEAgQA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Databases\Serializables\UIEquipmentType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DuloGames.UI.UIItemQuality" Collapsed="true">
+    <Position X="19.75" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAQAAAAAAAAAQAAAAAAAQAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Databases\Serializables\UIItemQuality.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DuloGames.UI.UISpellInfo_Flags" Collapsed="true">
+    <Position X="23.25" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Databases\Serializables\UISpellInfo_Flags.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DuloGames.UI.UIItemSlot_Group" Collapsed="true">
+    <Position X="21.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAACAAAAAAAAAAAAAAAAAAAAAAABAEAAAAgEAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\UIItemSlot_Group.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DuloGames.UI.UISpellSlot_Group" Collapsed="true">
+    <Position X="25" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAADAAAAAAAAAAAAAAAAAAAAIEAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Icon Slot System\UISpellSlot_Group.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DuloGames.UI.UITooltipTextEffectType" Collapsed="true">
+    <Position X="26.75" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tooltips\UITooltipLineStyle.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DuloGames.UI.OverrideTextAlignment" Collapsed="true">
+    <Position X="12.75" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAACACAAAAIAAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tooltips\UITooltipLineStyle.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DuloGames.UI.UIWindowID" Collapsed="true">
+    <Position X="28.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAABCgAAAAAAAACAgAAAAAAAAAAABAkAAAAgEACAA=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Window\UIWindowID.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DuloGames.UI.Tweens.TweenEasing" Collapsed="true">
+    <Position X="16.25" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAQgAECAAAAQABEkAIIQAEBBAiIIAUAAQ4AAAMo=</HashCode>
+      <FileName>Assets\Sprites\RPG and MMO UI 11\Scripts\UI\Tweening\TweenEasing.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="OnValueChanged" Collapsed="true">
+    <Position X="11" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerModel.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

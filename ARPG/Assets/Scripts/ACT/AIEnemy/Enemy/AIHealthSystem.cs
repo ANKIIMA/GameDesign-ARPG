@@ -6,6 +6,8 @@ using ACT.Health;
 
     public class AIHealthSystem : BasicHealthModel
     {
+    [SerializeField] private GameObject GreatSword;
+
         private void LateUpdate()
         {
             OnHitAnimationRotation(); 
@@ -26,6 +28,12 @@ using ACT.Health;
         }
         healthValue -= damager;
         uiManagement.OnEnemyHealthValueChange(this.CalHealthValuePercentage());
+
+        //生命值归零死亡
+        if(healthValue <= 0)
+        {
+            UpdateDieAnimation();
+        }
         }
 
         private void OnHitAnimationRotation()
@@ -35,4 +43,13 @@ using ACT.Health;
                 transform.rotation = transform.LockOnTarget(currentAttacker, transform, 50f);
             }
         }
+
+    /// <summary>
+    /// 死亡动画回调函数
+    /// </summary>
+    private void OnDieEvent()
+    {
+        Instantiate(GreatSword, this.transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
 }

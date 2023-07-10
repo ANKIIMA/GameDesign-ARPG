@@ -16,11 +16,15 @@ public class UIManagement : MonoBehaviour
     [SerializeField] private Image enemyHealthBar;
     [SerializeField] private GameObject InteractionInfoPanel;
     [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private GameObject inventoryPanel;
+
+    private bool inventoryIsEnable;
 
     public Image PlayerHealthBar { get => playerHealthBar; set => playerHealthBar = value; }
     public Image EnemyHealthBar { get => enemyHealthBar; set => enemyHealthBar = value; }
     public GameObject InteractionInfoPanel1 { get => InteractionInfoPanel; set => InteractionInfoPanel = value; }
     public GameObject DialoguePanel { get => dialoguePanel; set => dialoguePanel = value; }
+    public GameObject Inventory { get => inventoryPanel; set => inventoryPanel = value; }
 
     #region UnityÊÂ¼þº¯Êý
 
@@ -38,7 +42,7 @@ public class UIManagement : MonoBehaviour
 
     public void OnButtonStart()
     {
-        SceneManager.LoadScene("Scene2");
+        SceneManager.LoadScene("Scene1");
     }
 
     public void OnButtonExit()
@@ -77,7 +81,18 @@ public class UIManagement : MonoBehaviour
     
     public void OnDisableDialoguePanel()
     {
+        dialoguePanel.GetComponent<DialogueController>().InteruptDialogue();
         dialoguePanel.SetActive(false);
+    }
+
+    public void OnSwitchInventory()
+    {
+        inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+    }
+
+    public void OnInventoryCloseButton()
+    {
+        Debug.Log("button down");
     }
 
     #endregion

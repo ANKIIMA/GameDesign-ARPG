@@ -86,6 +86,8 @@ public class yuduCombatController : BasicCombatModel
         //Equip Secondary Weapon
         if (InputController.WeaponSwitch)
         {
+            if (GetComponent<yueduWeaponSwitchEvent>().HasGreatSword == false) return;
+
             if (weaponIndex == false)
             {
                 weaponIndex = true;

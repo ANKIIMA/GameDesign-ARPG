@@ -65,11 +65,15 @@ namespace ACT.Interaction {
         /// <returns></returns>
         private void InteractionDetection()
         {
+            //检测到角色
             int targetCount = Physics.OverlapSphereNonAlloc(interactionDetectionCenter.position, interactionDetectionRadius, interactiveTargetColliders, interativeLayerMask);
             if (targetCount > 0)
             {
+                //是否能交互
                 if (IsAbleToInteraction(interactiveTargetColliders[0].transform.root.transform) == true)
                 {
+                    //如果能 要么开启对话提示要么开启对话框
+                    //设置对话对象
                     SetCurrentInteractionTarget(interactiveTargetColliders[0].transform.root.transform);
                     if(basicUIRefModel.uiManagementRef.DialoguePanel.activeSelf == false)
                     {
@@ -83,8 +87,10 @@ namespace ACT.Interaction {
                 }
                 else
                 {
+                    //不能交互，UI全关
                     SetCurrentInteractionTarget(null);
                     basicUIRefModel.uiManagementRef.OnDisableInteractionInfoPanel();
+                    basicUIRefModel.uiManagementRef.OnDisableDialoguePanel();
                 }
             }
 

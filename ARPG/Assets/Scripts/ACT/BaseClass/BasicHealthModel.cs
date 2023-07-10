@@ -100,6 +100,11 @@ namespace ACT.Health
             
         }
 
+        public virtual void UpdateDieAnimation()
+        {
+            animator.Play("Die", 0, 0f);
+        }
+
         #endregion
         
         

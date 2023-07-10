@@ -10,17 +10,31 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private Text dialogueText;
     [SerializeField] private Image characterImage;
 
-    [Header("文本")]
+    [Header("文本显示")]
     [SerializeField] private TextAsset textFile;
     [SerializeField] private int index;
+    [SerializeField] private float textSpeed;
+
+    [Header("头像")]
+    [SerializeField] private Sprite yueduFace;
+    [SerializeField] private Sprite mllFace;
+
+    [Header("任务进度")]
+    [SerializeField] private int currentState;
 
     List<string> textList = new List<string>();
+    private bool textFinished;
 
+    public bool TextFinished { get => textFinished; set => textFinished = value; }
+
+
+
+
+    #region Unity事件函数
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         GetTextFromFile(textFile);
-        index = 0;
     }
 
     // Update is called once per frame
@@ -29,6 +43,15 @@ public class DialogueController : MonoBehaviour
         
     }
 
+    private void OnEnable()
+    {
+        textFinished = true;
+    }
+
+    #endregion
+
+
+    #region 内部方法
     private void GetTextFromFile(TextAsset file)
     {
         textList.Clear();
@@ -42,6 +65,36 @@ public class DialogueController : MonoBehaviour
         }
     }
 
+    private IEnumerator SetTextUI()
+    {
+        textFinished = false;
+        dialogueText.text = "";
+
+        switch(textList[index].Trim().ToString())
+        {
+            case "A":
+                characterImage.sprite = mllFace;
+                index++;
+                break;
+            case "B":
+                characterImage.sprite = yueduFace;
+                index++;
+                break;
+        }
+
+        for(int i = 0; i < textList[index].Length; i++)
+        {
+            dialogueText.text += textList[index][i];
+            yield return new WaitForSeconds(textSpeed);
+        }
+        index++;
+        textFinished = true;
+    }
+
+    #endregion
+
+
+    #region 外部方法
     public void UpdateDialogueText()
     {
         if(index == textList.Count)
@@ -50,7 +103,18 @@ public class DialogueController : MonoBehaviour
             index = 0;
             return;
         }
-        dialogueText.text = textList[index];
-        index++;
+        if(textList.Count == 0)
+        {
+            return;
+        }
+        if (textFinished == false) return;
+        StartCoroutine(SetTextUI());
     }
+
+    public void InteruptDialogue()
+    {
+        index = 0;
+        gameObject.SetActive(false);
+    }
+    #endregion
 }

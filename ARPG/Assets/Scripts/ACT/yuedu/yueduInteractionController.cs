@@ -21,6 +21,7 @@ public class yueduInteractionController : MonoBehaviour
     {
         CheckDialogue();
         NextDialogue();
+        EnableInventory();
     }
 
     /// <summary>
@@ -41,9 +42,19 @@ public class yueduInteractionController : MonoBehaviour
     /// </summary>
     private void NextDialogue()
     {
-        if(inputController.Interact && basicUIRefModel.uiManagementRef.DialoguePanel.activeSelf == true)
+        if(inputController.Interact)
         {
             dialogueController.UpdateDialogueText();
         }
     }
+
+    private void EnableInventory()
+    {
+        if(inputController.Inventory)
+        {
+            basicUIRefModel.uiManagementRef.OnSwitchInventory();
+        }
+    }
+
+    
 }

@@ -80,6 +80,7 @@ public class CameraController : MonoBehaviour
     #endregion
 
 
+    
     #region 内部方法
     /// <summary>
     /// 管理鼠标
@@ -136,7 +137,7 @@ public class CameraController : MonoBehaviour
         }
         camera.transform.localPosition = Vector3.Lerp(camera.transform.localPosition, _camDirection * (_cameraDistance - 0.1f), colliderMotionLerpTime * Time.deltaTime);
     }
-
+    
 
 
     #endregion
