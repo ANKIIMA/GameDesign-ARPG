@@ -5,13 +5,6 @@ using ACT.Interaction;
 
 public class MLLInteractionController : BasicInteractionModel
 {
-
-
-
-    private void OnDrawGizmos()
-    {
-        //Gizmos.DrawSphere(interactionDetectionCenter.position, interactionDetectionRadius);
-    }
-
+    [SerializeField] private int missionState;
 
 }

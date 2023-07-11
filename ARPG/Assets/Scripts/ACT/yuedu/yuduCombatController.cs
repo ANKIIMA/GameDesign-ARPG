@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ACT.Combat;
+using ACT.UI;
 
 public class yuduCombatController : BasicCombatModel
 {
@@ -41,12 +42,25 @@ public class yuduCombatController : BasicCombatModel
 
     #region 内部函数
 
+    private bool CheckUIState()
+    {
+        if (GetComponent<BasicUIRefModel>().uiManagementRef.InventoryIsEnable == true)
+            return false;
+        return true;
+    }
+
     /// <summary>
     /// 判断是否能够输入攻击
     /// </summary>
     /// <returns></returns>
     private bool CanInputAttack()
     {
+        if(CheckUIState() == false)
+        {
+            animator.ResetTrigger(lAtkID);
+            animator.ResetTrigger(rAtkID);
+            return false;
+        }
         //bug: 不足0.25的标准化时间也会发生状态转移？
         if (animator.CheckCurrentAnimationTagTimeIsGreater("Attack", 0.22f))
         {
@@ -127,9 +141,6 @@ public class yuduCombatController : BasicCombatModel
             }
         }
     }
-
-
-
     /// <summary>
     /// 判断攻击状态是否允许自动锁定敌人
     /// </summary>
@@ -145,8 +156,6 @@ public class yuduCombatController : BasicCombatModel
         }
         return false;
     }
-
-
     /// <summary>
     /// 检测前方敌人
     /// </summary>
@@ -161,7 +170,6 @@ public class yuduCombatController : BasicCombatModel
         }
         
     }
-
     /// <summary>
     /// 设置当前锁定目标
     /// </summary>
@@ -173,7 +181,6 @@ public class yuduCombatController : BasicCombatModel
             currentTarget = target;
         }
     }
-
     /// <summary>
     /// 更新锁定状态
     /// 移动时不能自动锁定

@@ -4,29 +4,35 @@ using UnityEngine;
 
 public class ItemWorldController : MonoBehaviour
 {
-    [SerializeField] private  ItemSO item;
-    [SerializeField] private InventorySO inventory;
+    [SerializeField] private  ItemSO itemso;
+    [SerializeField] private InventorySO inventoryso;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            //AddNewItem();
-            other.GetComponent<yueduWeaponSwitchEvent>().EquipGreatSword();
+            AddNewItem();
             Destroy(gameObject);
         }
     }
 
     private void AddNewItem()
     {
-        if(inventory.ItemList.Contains(item) == false)
+        
+        //背包中不存在该类物体
+        if(inventoryso.ItemList.Contains(itemso) == false)
         {
-            inventory.ItemList.Add(item);
-            Destroy(gameObject);
+            inventoryso.ItemList.Add(itemso);
         }
+        //存在该类物体
         else
         {
-            item.ItemHeld += 1;
+            itemso.ItemHeld += 1;
+
         }
+
+        InventoryController.UpdateItemInfo();
     }
+
+
 }

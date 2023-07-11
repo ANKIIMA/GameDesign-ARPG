@@ -25,6 +25,7 @@ public class UIManagement : MonoBehaviour
     public GameObject InteractionInfoPanel1 { get => InteractionInfoPanel; set => InteractionInfoPanel = value; }
     public GameObject DialoguePanel { get => dialoguePanel; set => dialoguePanel = value; }
     public GameObject Inventory { get => inventoryPanel; set => inventoryPanel = value; }
+    public bool InventoryIsEnable { get => inventoryIsEnable; set => inventoryIsEnable = value; }
 
     #region UnityÊÂ¼þº¯Êý
 
@@ -32,6 +33,7 @@ public class UIManagement : MonoBehaviour
     {
         playerLayerID = LayerMask.NameToLayer("Player");
         enemyLayerID = LayerMask.NameToLayer("Enemy");
+        InventoryIsEnable = Inventory.activeSelf;
     }
 
 
@@ -88,11 +90,7 @@ public class UIManagement : MonoBehaviour
     public void OnSwitchInventory()
     {
         inventoryPanel.SetActive(!inventoryPanel.activeSelf);
-    }
-
-    public void OnInventoryCloseButton()
-    {
-        Debug.Log("button down");
+        InventoryIsEnable = !InventoryIsEnable;
     }
 
     #endregion

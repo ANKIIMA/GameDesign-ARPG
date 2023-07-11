@@ -7,6 +7,9 @@ public class CameraController : MonoBehaviour
     private PlayerInputController inputInfo;
     private Transform playerCamera;
 
+    //ref
+    [SerializeField] private GameObject uiManagement;
+
     //Camera will look at this position instead of center of the character
     [SerializeField] private Transform LookAtPosition;
 
@@ -87,6 +90,12 @@ public class CameraController : MonoBehaviour
     /// </summary>
     private void cursorController()
     {
+        if(uiManagement.GetComponent<UIManagement>().InventoryIsEnable == true)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            return;
+        }
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -96,7 +105,7 @@ public class CameraController : MonoBehaviour
     /// </summary>
     private void getCameraInput()
     {
-        if(isLockOn)
+        if (isLockOn || uiManagement.GetComponent<UIManagement>().InventoryIsEnable == true)
         {
             return;
         }

@@ -13,6 +13,17 @@ public class yueduHealthController : BasicHealthModel
 
     #region 外部方法
 
+    public void TakePortion(string portionName)
+    {
+        switch(portionName)
+        {
+            case "生命药水":
+                healthValue = Mathf.Clamp(100, 0f, fullHealthValue);
+                break;
+        }
+        uiManagement.OnPlayerHealthValueChange(this.CalHealthValuePercentage());
+    }
+
 
     /// <summary>
     /// 重写接受方法

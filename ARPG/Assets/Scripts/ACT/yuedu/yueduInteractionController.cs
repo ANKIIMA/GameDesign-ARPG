@@ -48,6 +48,9 @@ public class yueduInteractionController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 打开/关闭背包界面
+    /// </summary>
     private void EnableInventory()
     {
         if(inputController.Inventory)

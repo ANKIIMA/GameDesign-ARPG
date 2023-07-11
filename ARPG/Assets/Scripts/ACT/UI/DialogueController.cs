@@ -11,6 +11,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private Image characterImage;
 
     [Header("ÎÄ±¾ÏÔÊ¾")]
+    [SerializeField] private DialogueSO dialogueso;
     [SerializeField] private TextAsset textFile;
     [SerializeField] private int index;
     [SerializeField] private float textSpeed;
@@ -34,7 +35,8 @@ public class DialogueController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        GetTextFromFile(textFile);
+        currentState = 0;
+        textFile = null;
     }
 
     // Update is called once per frame
@@ -46,6 +48,15 @@ public class DialogueController : MonoBehaviour
     private void OnEnable()
     {
         textFinished = true;
+        if(currentState == 0)
+        {
+            textFile = dialogueso.GetTextAsset("Start");
+        }
+        else if(currentState == 1)
+        {
+            textFile = dialogueso.GetTextAsset("End");
+        }
+        GetTextFromFile(textFile);
     }
 
     #endregion
@@ -101,6 +112,7 @@ public class DialogueController : MonoBehaviour
         {
             gameObject.SetActive(false);
             index = 0;
+            currentState = 1;
             return;
         }
         if(textList.Count == 0)

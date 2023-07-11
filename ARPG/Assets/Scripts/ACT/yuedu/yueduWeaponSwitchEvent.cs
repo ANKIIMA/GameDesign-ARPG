@@ -62,7 +62,7 @@ public class yueduWeaponSwitchEvent : MonoBehaviour
         }
     }
 
-    public void EquipGreatSword()
+    public void OnEquipGreatSwordEvent()
     {
         hasGreatSword = true;
         backGreatSword.gameObject.SetActive(true);
