@@ -11,6 +11,7 @@ public class AICombat : BasicCombatModel
     [SerializeField] private float viewFieldCosValue;
     [SerializeField] private LayerMask PlayerMaskLayer;
     [SerializeField] private LayerMask ObstacleLayer;
+    [SerializeField] private UIManagement uiManagement;
 
     Collider[] colliderTarget = new Collider[1];
 
@@ -53,6 +54,7 @@ public class AICombat : BasicCombatModel
                 if(Vector3.Dot((colliderTarget[0].transform.position - transform.root.position).normalized, transform.root.forward) > viewFieldCosValue)
                 {
                     currentTarget = colliderTarget[0].transform;
+                    uiManagement.GetComponent<UIManagement>().EnemyHealthBar.gameObject.transform.parent.parent.gameObject.SetActive(true);
                 }
             }
         }

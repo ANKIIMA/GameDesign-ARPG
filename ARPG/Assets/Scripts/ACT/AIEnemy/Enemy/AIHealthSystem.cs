@@ -8,7 +8,12 @@ using ACT.Health;
     {
     [SerializeField] private GameObject GreatSword;
 
-        private void LateUpdate()
+    private void Start()
+    {
+        uiManagement.EnemyHealthBar.gameObject.transform.parent.parent.gameObject.SetActive(false);
+    }
+
+    private void LateUpdate()
         {
             OnHitAnimationRotation(); 
         }
@@ -50,6 +55,7 @@ using ACT.Health;
     private void OnDieEvent()
     {
         Instantiate(GreatSword, this.transform.position, Quaternion.identity);
+        uiManagement.EnemyHealthBar.gameObject.transform.parent.parent.gameObject.SetActive(false);
         Destroy(gameObject);
     }
 }
