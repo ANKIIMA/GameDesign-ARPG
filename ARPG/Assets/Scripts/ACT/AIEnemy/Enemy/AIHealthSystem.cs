@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using ACT.Health;
+using Newtonsoft.Json;
+using System.IO;
+using Unity.Collections;
 
-
-    public class AIHealthSystem : BasicHealthModel
+public class AIHealthSystem : BasicHealthModel
     {
     [SerializeField] private GameObject GreatSword;
 
     private void Start()
     {
+        //开始先禁用血条
         uiManagement.EnemyHealthBar.gameObject.transform.parent.parent.gameObject.SetActive(false);
+        //加载属性配置
+        ReadConfig();
     }
 
     private void LateUpdate()
@@ -57,5 +62,33 @@ using ACT.Health;
         Instantiate(GreatSword, this.transform.position, Quaternion.identity);
         uiManagement.EnemyHealthBar.gameObject.transform.parent.parent.gameObject.SetActive(false);
         Destroy(gameObject);
+    }
+
+    private void ReadConfig()
+    {
+        //json路径
+        string filePath = "Assets/Resources/Data/Config_AI.json";
+        //如果没找到就返回
+        if(File.Exists(filePath) == false) 
+        {
+            Debug.Log("File not Found");
+            return;
+        }
+
+
+        //读取文件为字符串
+        string json = File.ReadAllText(filePath);
+
+        //如果字符串不为空
+        if(json.Length > 0)
+        {
+            //反序列化JSON数组对象
+            List<AIConfig> roots = JsonConvert.DeserializeObject<List<AIConfig>>(json);
+
+
+            return;
+        }
+
+        return;
     }
 }
